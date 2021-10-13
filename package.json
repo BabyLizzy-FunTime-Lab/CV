@@ -1,0 +1,28 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "Curriculum Vitea José Rasmussen",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BabyLizzy-FunTime-Lab/CV.git"
+  },
+  "keywords": [
+    "curriculum",
+    "vitea",
+    "José",
+    "Rasmussen"
+  ],
+  "author": "José Rasmussen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BabyLizzy-FunTime-Lab/CV/issues"
+  },
+  "homepage": "https://github.com/BabyLizzy-FunTime-Lab/CV#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
