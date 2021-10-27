@@ -1,0 +1,26 @@
+.navitem-logo {
+	grid-area: logo;
+}
+
+.navitem-1 {
+	grid-area: intro;
+}
+
+.navitem-2 {
+	grid-area: cv;
+}
+
+.navitem-3 {
+	grid-area: projects;
+}
+
+.navitem-4 {
+	grid-area: gallery;
+}
+
+nav {
+	display: grid;
+	grid-template-columns: .5fr 2fr 1fr 1fr 1fr 1fr 1.5fr;
+	grid-template-rows: 3em;
+	grid-template-areas: "logo . intro cv projects gallery . " ;
+}
