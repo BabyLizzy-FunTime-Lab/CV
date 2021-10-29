@@ -1,3 +1,15 @@
+:root {
+	/*kleuren*/
+	--color-snow: rgb(255, 250, 250);
+	--color-whitesmoke: rgb(245,245,245);
+	--color-steelblue: rgb(70,130,180);
+	--color-dodgerblue: rgb(30,144,255);
+	--color-menu-highlight: rgba(105, 105, 105, 0.9);
+	--color-schaduw: rgba(0, 0, 0, 0.2);
+	--color-gainsboro: rgb(220,220,220);
+	--color-lichtzwart: hsl(0, 0%, 15%);
+	--color-lichtgrijs: rgb(112, 112, 110);
+}
 .navitem-logo {
 	grid-area: logo;
 }
@@ -17,10 +29,35 @@
 .navitem-4 {
 	grid-area: gallery;
 }
-
+body {
+	background-color: var(--color-whitesmoke);
+}
 nav {
+	font-family: 'Orbitron', sans-serif;
 	display: grid;
-	grid-template-columns: .5fr 2fr 1fr 1fr 1fr 1fr 1.5fr;
-	grid-template-rows: 3em;
-	grid-template-areas: "logo . intro cv projects gallery . " ;
+	grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr 1fr 2fr;
+	grid-template-rows: 3.5em;
+	grid-template-areas: ". logo . intro cv projects gallery . " ;
+}
+header {
+	font-family: 'Orbitron', sans-serif;
+	background-color: var(--color-steelblue);
+	display: grid;
+	grid-template-rows: 3em calc(100vh - 9.5em) 3em;
+	grid-template-columns: 0.5fr 2fr .5fr 4fr 0.5fr;
+	grid-template-areas:
+		". . . . ."
+		". welcome . bannerImage ."
+		". . . . .";
+
+
+}
+.banner__message {
+	grid-area: welcome;
+}
+.banner__image {
+	grid-area: bannerImage;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
 }
