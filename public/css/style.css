@@ -10,6 +10,9 @@
 	--color-lichtzwart: hsl(0, 0%, 15%);
 	--color-lichtgrijs: rgb(112, 112, 110);
 }
+body {
+	background-color: var(--color-whitesmoke);
+}
 .navitem-logo {
 	grid-area: logo;
 }
@@ -29,28 +32,26 @@
 .navitem-4 {
 	grid-area: gallery;
 }
-body {
-	background-color: var(--color-whitesmoke);
+.navitem-5 {
+	grid-area: contact;
 }
 nav {
 	font-family: 'Orbitron', sans-serif;
 	display: grid;
-	grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr 1fr 2fr;
+	grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
 	grid-template-rows: 3.5em;
-	grid-template-areas: ". logo . intro cv projects gallery . " ;
+	grid-template-areas: ". logo . intro cv projects gallery contact . " ;
 }
 header {
 	font-family: 'Orbitron', sans-serif;
 	background-color: var(--color-steelblue);
 	display: grid;
 	grid-template-rows: 3em calc(100vh - 9.5em) 3em;
-	grid-template-columns: 0.5fr 2fr .5fr 4fr 0.5fr;
+	grid-template-columns: 3em 2fr .5fr 4fr 3em;
 	grid-template-areas:
 		". . . . ."
 		". welcome . bannerImage ."
 		". . . . .";
-
-
 }
 .banner__message {
 	grid-area: welcome;
@@ -60,4 +61,21 @@ header {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
+}
+.footer--info {
+	grid-area: footerInfo;
+}
+.footer--image {
+	grid-area: footerImage;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+footer {
+	font-family: 'Orbitron', sans-serif;
+	background-color: var(--color-steelblue);
+	display: grid;
+	grid-template-rows: 18em;
+	grid-template-columns: 3em 5fr 3fr 3em;
+	grid-template-areas: ". footerInfo footerImage .";
 }
