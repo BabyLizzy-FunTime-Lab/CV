@@ -16,11 +16,22 @@ body {
 	scroll-behavior: smooth;
 }
 .navitem {
-	place-self: center center;
+	/*place-self: center center;*/
+	/*text-align: center;*/
+	/*height: 100%;
+	width: 100%;*/
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
 	text-decoration: none;
 	font-size: 1.3em;
 	font-weight: bold;
 	color: var(--color-black);
+}
+.navitem:hover {
+	background-color: var(--color-menu-highlight);
+	color: var(--color-whitesmoke);
+	transition: all ease-in-out 0.5s;
 }
 .navitem-logo {
 	grid-area: logo;
@@ -30,13 +41,11 @@ body {
 	grid-area: intro;
 }
 .navitem-2 {
-	grid-area: cv;
+	grid-area: resume;
 }
-
 .navitem-3 {
 	grid-area: projects;
 }
-
 .navitem-4 {
 	grid-area: gallery;
 }
@@ -47,7 +56,7 @@ nav {
 	display: grid;
 	grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
 	grid-template-rows: 3.5em;
-	grid-template-areas: ". logo . intro cv projects gallery contact . ";
+	grid-template-areas: ". logo . intro resume projects gallery contact . ";
 	font-family: 'Orbitron', sans-serif;
 	background-color: var(--color-whitesmoke);
 	position: sticky;
@@ -65,22 +74,25 @@ nav {
 			font-size: 1em;
 		}
 		nav {
-			grid-template-columns: .8fr .5fr 1fr 1fr 1fr;
+			grid-template-columns: .8fr .8fr 1fr 1fr 1fr;
 			grid-template-rows: 1.5em 2.5em;
 			grid-template-areas: 
 				"logo logo logo logo logo"
-				"intro cv projects gallery contact";
+				"intro resume projects gallery contact";
 		}
 	}
-/*Laptop scherm nav*/
+/*Laptop nav*/
 @media screen 
   	and (min-device-width: 1200px) 
   	and (max-device-width: 1600px) 
   	and (-webkit-min-device-pixel-ratio: 1) {
+  		.navitem {
+			font-size: 1em;
+		}
 		nav {
-			grid-template-columns: 0.2fr 2fr 0.8fr 0.5fr 0.5fr 1fr 1fr 1fr 0.2fr;
+			grid-template-columns: 0.1fr 2fr 0.2fr 0.9fr .9fr .9fr .9fr .9fr 0.1fr;
 			grid-template-rows: 3.5em;
-			grid-template-areas: ". logo . intro cv projects gallery contact . ";
+			grid-template-areas: ". logo . intro resume projects gallery contact . ";
 		}
 	}
 @media screen 
@@ -88,13 +100,16 @@ nav {
   	and (max-device-width: 1600px) 
   	and (-webkit-min-device-pixel-ratio: 2)
   	and (min-resolution: 192dpi) {
+  		.navitem {
+			font-size: 1em;
+		}
 	  	nav {
-			grid-template-columns: 0.2fr 2fr 0.8fr 0.5fr 0.5fr 1fr 1fr 1fr 0.2fr;
+			grid-template-columns: 0.1fr 2fr 0.2fr 0.9fr .9fr .9fr .9fr .9fr 0.1fr;
 			grid-template-rows: 3.5em;
-			grid-template-areas: ". logo . intro cv projects gallery contact . ";
+			grid-template-areas: ". logo . intro resume projects gallery contact . ";
 		}
 	}
-header {
+.banner-container {
 	font-family: 'Orbitron', sans-serif;
 	background-color: var(--color-steelblue);
 	display: grid;
@@ -105,14 +120,39 @@ header {
 		". welcome . bannerImage ."
 		". . . . .";
 }
-.banner__message {
+.banner-message {
 	grid-area: welcome;
 }
-.banner__image {
+.banner-image {
 	grid-area: bannerImage;
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
+}
+.intro-header {
+	grid-area: intro-header;
+}
+.intro-image {
+	grid-area: intro-image;
+	place-self: center center;
+	height: 85%;
+	width: 75%;
+	object-fit: cover;
+}
+.intro-text {
+	grid-area: intro-text;
+	place-self: center center;
+	width: 75%;
+}
+.intro-container {
+	font-family: 'Orbitron', sans-serif;
+	display: grid;
+	grid-template-rows: 3em calc(100vh - 9.5em) 3em;
+	grid-template-columns: 3em 4fr 2fr 3em;
+	grid-template-areas: 
+		". intro-header intro-header ."
+		". intro-text intro-image ."
+		". . . .";
 }
 .footer--info {
 	grid-area: footerInfo;
