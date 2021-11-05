@@ -109,6 +109,7 @@ nav {
 			grid-template-areas: ". logo . intro resume projects gallery contact . ";
 		}
 	}
+/*//////////////////banner ///////////////*/
 .banner-container {
 	font-family: 'Orbitron', sans-serif;
 	background-color: var(--color-steelblue);
@@ -129,6 +130,7 @@ nav {
 	width: 100%;
 	object-fit: cover;
 }
+/*//////////////// intro ///////////////*/
 .intro-header {
 	grid-area: intro-header;
 }
@@ -148,12 +150,24 @@ nav {
 	font-family: 'Orbitron', sans-serif;
 	display: grid;
 	grid-template-rows: 3em calc(100vh - 9.5em) 3em;
-	grid-template-columns: 3em 4fr 2fr 3em;
+	grid-template-columns: 3fr 4fr 4fr 3fr;
 	grid-template-areas: 
-		". intro-header intro-header ."
+		". . . ."
 		". intro-text intro-image ."
 		". . . .";
 }
+/*mobile intro*/
+@media screen
+	and (max-width: 1366px)
+	and (-webkit-min-device-pixel-ratio:  2) {
+		.intro-container {
+			grid-template-rows: auto auto;
+			grid-template-columns: auto;
+			grid-template-areas: 
+				"intro-text"
+				"intro-image";
+		}
+	}
 .footer--info {
 	grid-area: footerInfo;
 }
