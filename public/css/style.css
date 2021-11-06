@@ -168,6 +168,57 @@ nav {
 				"intro-image";
 		}
 	}
+/*/////////////// Gallery ///////////////*/
+.gallery-image-1 {
+	grid-area: image-1;
+	background-color: blue;
+}
+.gallery-image-2 {
+	grid-area: image-2;
+	background-color: lightgrey;
+}
+.gallery-image-3 {
+	grid-area: image-3;
+	background-color: black;
+}
+.gallery-image-4 {
+	grid-area: image-4;
+	background-color: grey;
+}
+.gallery-image-5 {
+	grid-area: image-5;
+	background-color: orange;
+}
+.gallery-image-6 {
+	grid-area: image-6;
+	background-color: purple;
+}
+.gallery-image-7 {
+	grid-area: image-7;
+	background-color: red;
+}
+.gallery-image-8 {
+	grid-area: image-8;
+	background-color: groen;
+}
+.gallery-tile {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.gallery-header {
+	grid-area: gallery-header;
+}
+.gallery {
+	font-family: 'Orbitron', sans-serif;
+	display: grid;
+	grid-template-rows: 3em 1fr ifr: ;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas: 
+		"gallery-header gallery-header gallery-header gallery-header"
+		"image-1 image-2 image-3 image-4"
+		"image-5 image-6 image-7 image-7";
+}
 .footer--info {
 	grid-area: footerInfo;
 }
