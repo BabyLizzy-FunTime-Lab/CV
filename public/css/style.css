@@ -241,25 +241,26 @@ nav {
 .gallery-frame {
 	grid-area: gallery-frame;
 }
-.gallery-header {
+.gallery-header h2 {
 	grid-area: gallery-header;
 	place-self: center left;
 }
-.gallery-header h2 { margin: 0; }
+/*.gallery-header h2 { margin: 0; }*/
 .gallery-container {
 	display: grid;
 	grid-template-rows: 3em calc(100vh - 9.5em) 3em;
 	grid-template-columns: 1fr 6fr 1fr;
 	grid-template-areas: 
-		". gallery-header ."
+		". . ."
 		". gallery-frame ."
 		". . .";
 }
 .gallery-frame {
 	display: grid;
-	grid-template-rows: 30vh 30vh;
+	grid-template-rows: 3em 30vh 30vh;
 	grid-template-columns: auto auto auto auto;
-	grid-template-areas: 
+	grid-template-areas:
+		". gallery-header . ." 
 		"image-1 image-2 image-3 image-4"
 		"image-5 image-6 image-7 image-8";
 	place-self: center stretch;
