@@ -200,7 +200,7 @@ nav {
 	}
 }
 /*/////////////// Gallery ///////////////*/
-
+.gallery { font-family: 'Orbitron', sans-serif; }
 .gallery-image-1 {
 	grid-area: image-1;
 	background-color: blue;
@@ -238,11 +238,22 @@ nav {
 	width: 100%;
 	object-fit: cover;
 }
+.gallery-frame {
+	grid-area: gallery-frame;
+}
 .gallery-header {
 	grid-area: gallery-header;
+	place-self: center left;
 }
-.gallery {
-	font-family: 'Orbitron', sans-serif;
+.gallery-header h2 { margin: 0; }
+.gallery-container {
+	display: grid;
+	grid-template-rows: 3em calc(100vh - 9.5em) 3em;
+	grid-template-columns: 1fr 6fr 1fr;
+	grid-template-areas: 
+		". gallery-header ."
+		". gallery-frame ."
+		". . .";
 }
 .gallery-frame {
 	display: grid;
@@ -251,6 +262,7 @@ nav {
 	grid-template-areas: 
 		"image-1 image-2 image-3 image-4"
 		"image-5 image-6 image-7 image-8";
+	place-self: center stretch;
 }
 .footer--info {
 	grid-area: footerInfo;
