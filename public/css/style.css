@@ -123,6 +123,7 @@ nav {
 }
 .banner-message {
 	grid-area: welcome;
+	font-size: 1.5em;
 }
 .banner-image {
 	grid-area: bannerImage;
@@ -130,6 +131,7 @@ nav {
 	width: 100%;
 	object-fit: cover;
 }
+
 /*//////////////// intro ///////////////*/
 .intro-header {
 	grid-area: intro-header;
@@ -160,6 +162,13 @@ nav {
 @media screen
 	and (max-width: 1366px)
 	and (-webkit-min-device-pixel-ratio:  2) {
+		.intro-text {
+			width: 90%;
+		}
+		.intro-image {
+			height: 90%;
+			width: 80%;
+		}
 		.intro-container {
 			grid-template-rows: auto auto;
 			grid-template-columns: auto;
@@ -168,7 +177,30 @@ nav {
 				"intro-image";
 		}
 	}
+/*///////////Laptop/tablet menu//////////////////////////*/
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-width: 1024px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-max-device-pixel-ratio: 2) {
+  	.intro-text {
+		width: 90%;
+	}
+	.intro-image {
+		height: 55%;
+		width: 80%;
+	}
+  	.intro-container {
+		grid-template-rows: 3em calc(100vh - 9.5em) 3em;
+		grid-template-columns: auto auto;
+		grid-template-areas: 
+			". ."
+			"intro-text intro-image"
+			". .";
+	}
+}
 /*/////////////// Gallery ///////////////*/
+
 .gallery-image-1 {
 	grid-area: image-1;
 	background-color: blue;
@@ -211,13 +243,14 @@ nav {
 }
 .gallery {
 	font-family: 'Orbitron', sans-serif;
+}
+.gallery-frame {
 	display: grid;
-	grid-template-rows: 3em 1fr ifr: ;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 30vh 30vh;
+	grid-template-columns: auto auto auto auto;
 	grid-template-areas: 
-		"gallery-header gallery-header gallery-header gallery-header"
 		"image-1 image-2 image-3 image-4"
-		"image-5 image-6 image-7 image-7";
+		"image-5 image-6 image-7 image-8";
 }
 .footer--info {
 	grid-area: footerInfo;
