@@ -241,11 +241,11 @@ nav {
 .gallery-frame {
 	grid-area: gallery-frame;
 }
-.gallery-header h2 {
+.gallery-header {
 	grid-area: gallery-header;
 	place-self: center left;
 }
-/*.gallery-header h2 { margin: 0; }*/
+.gallery-header h2 { margin: 0; }
 .gallery-container {
 	display: grid;
 	grid-template-rows: 3em calc(100vh - 9.5em) 3em;
@@ -260,7 +260,7 @@ nav {
 	grid-template-rows: 3em 30vh 30vh;
 	grid-template-columns: auto auto auto auto;
 	grid-template-areas:
-		". gallery-header . ." 
+		"gallery-header gallery-header gallery-header gallery-header" 
 		"image-1 image-2 image-3 image-4"
 		"image-5 image-6 image-7 image-8";
 	place-self: center stretch;
@@ -280,5 +280,5 @@ footer {
 	display: grid;
 	grid-template-rows: 18em;
 	grid-template-columns: 3em 5fr 3fr 3em;
-	grid-template-areas: ". footerInfo footerImage .";
+	grid-template-areas: ". footerInfo footerImage footerImage";
 }
