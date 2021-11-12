@@ -157,7 +157,8 @@ nav {
 }
 .intro-container {
 	display: grid;
-	grid-template-rows: 3em calc(100vh - 9.5em) 3em;
+	/*grid-template-rows: 3em calc(100vh - 9.5em) 3em;*/
+	grid-template-rows: 3em auto 3em;
 	grid-template-columns: 3fr 4fr 4fr 3fr;
 	grid-template-areas: 
 		". . . ."
@@ -205,6 +206,9 @@ nav {
 			". .";
 	}
 }
+/*////////////// Resume /////////////////////*/
+
+
 /*////////////// My Projects ////////////////*/
 .projects-header, .projects-sectionheader {
 	font-family: var(--font-headers), sans-serif;
@@ -239,6 +243,28 @@ nav {
 		". projects-ninjarun ."
 		". projects-resume ."
 		". . .";
+}
+.projects-sectionheader {
+	grid-area: projects-sectionheader;
+}
+.projects-image {
+	grid-area: projects-image;
+	background-color: var(--color-lightgrey);
+	place-self: center;
+	object-fit: cover;
+	width: 70%;
+	height: 90%;
+}
+.projects-text {
+	grid-area: projects-text;
+}
+.projects-section {
+	display: grid;
+	grid-template-rows: auto 25em;
+	grid-template-columns: 2fr 1fr;
+	grid-template-areas:
+		"projects-sectionheader projects-sectionheader"
+		"projects-text projects-image"
 }
 /*/////////////// Gallery ///////////////*/
 .gallery { font-family: var(--font-headers);, sans-serif; }
@@ -289,10 +315,9 @@ nav {
 .gallery-header h2 { margin: 0; }
 .gallery-container {
 	display: grid;
-	grid-template-rows: 3em calc(100vh - 9.5em) 3em;
+	grid-template-rows: calc(100vh - 6.5em) 3em;
 	grid-template-columns: 1fr 6fr 1fr;
-	grid-template-areas: 
-		". . ."
+	grid-template-areas:
 		". gallery-frame ."
 		". . .";
 }
