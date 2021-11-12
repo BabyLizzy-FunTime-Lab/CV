@@ -1,4 +1,9 @@
 :root {
+	/*font*/
+	--font-nav: 'Orbitron';
+	--font-banner: 'Orbitron';
+	--font-headers: 'Orbitron';
+	--font-text: 'Orbitron';
 	/*kleuren*/
 	--color-snow: rgb(255, 250, 250);
 	--color-whitesmoke: rgb(245,245,245);
@@ -57,7 +62,7 @@ nav {
 	grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
 	grid-template-rows: 3.5em;
 	grid-template-areas: ". logo . intro resume projects gallery contact . ";
-	font-family: 'Orbitron', sans-serif;
+	font-family: var(--font-nav), sans-serif;
 	background-color: var(--color-whitesmoke);
 	position: sticky;
 	top: 0;
@@ -111,7 +116,7 @@ nav {
 	}
 /*//////////////////banner ///////////////*/
 .banner-container {
-	font-family: 'Orbitron', sans-serif;
+	font-family: var(--font-banner), sans-serif;
 	background-color: var(--color-steelblue);
 	display: grid;
 	grid-template-rows: 3em calc(100vh - 9.5em) 3em;
@@ -199,8 +204,15 @@ nav {
 			". .";
 	}
 }
+/*////////////// Projects ////////////////*/
+.projects header {
+	font-family: var(--font-headers), sans-serif;
+}
+.projects div {
+	font-family: var(--font-text), sans-serif;
+}
 /*/////////////// Gallery ///////////////*/
-.gallery { font-family: 'Orbitron', sans-serif; }
+.gallery { font-family: var(--font-headers);, sans-serif; }
 .gallery-image-1 {
 	grid-area: image-1;
 	background-color: blue;
@@ -275,7 +287,7 @@ nav {
 	object-fit: cover;
 }
 footer {
-	font-family: 'Orbitron', sans-serif;
+	font-family: var(--font-headers);, sans-serif;
 	background-color: var(--color-steelblue);
 	display: grid;
 	grid-template-rows: 18em;
