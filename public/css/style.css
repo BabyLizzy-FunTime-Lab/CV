@@ -207,9 +207,8 @@ nav {
 	}
 }
 /*////////////// Resume /////////////////////*/
-
-.resume-container {
-	
+.resume-header, .resume-sectionheader {
+	font-family: var(--font-headers), sans-serif;
 }
 /*////////////// My Projects ////////////////*/
 .projects-header, .projects-sectionheader {
