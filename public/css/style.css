@@ -215,6 +215,9 @@ nav {
 }
 .resume-downloadbtn {
 	grid-area: resume-downloadbtn;
+	width: 75%;
+	height: 50%;
+	place-self: center;
 }
 .resume-intro {
 	grid-area: resume-intro;
@@ -234,15 +237,15 @@ nav {
 .resume-container {
 	display: grid;
 	grid-template-rows: auto auto auto auto auto auto 3em;
-	grid-template-columns: 1fr 6fr 1fr 1fr;
+	grid-template-columns: 1fr 6fr 2fr 1fr;
 	grid-template-areas:
-		". resume-header ."
-		". resume-intro resume-intro resume-downloadbtn ."
+		". resume-header resume-downloadbtn ."
+		". resume-intro resume-intro ."
 		". resume-education resume-education ."
 		". resume-languages resume-languages ."
 		". resume-experience resume-experience ."
 		". resume-additional resume-additional ."
-		". . .";
+		". . . .";
 }
 /*////////////// My Projects ////////////////*/
 .projects-header, .projects-sectionheader {
