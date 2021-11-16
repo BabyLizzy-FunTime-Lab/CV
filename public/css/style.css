@@ -210,6 +210,37 @@ nav {
 .resume-header, .resume-sectionheader {
 	font-family: var(--font-headers), sans-serif;
 }
+.resume-header {
+	grid-area: resume-header;
+}
+.resume-intro {
+	grid-area: resume-intro;
+}
+.resume-education {
+	grid-area: resume-education;
+}
+.resume-languages {
+	grid-area: resume-languages;
+}
+.resume-experience {
+	grid-area: resume-experience;
+}
+.resume-additional {
+	grid-area: resume-additional;
+}
+.resume-container {
+	display: grid;
+	grid-template-rows: 3em auto auto auto auto auto 3em;
+	grid-template-columns: 1fr 6fr 1fr;
+	grid-template-areas:
+		". resume-header ."
+		". resume-intro ."
+		". resume-education ."
+		". resume-languages ."
+		". resume-experience ."
+		". resume-additional ."
+		". . .";
+}
 /*////////////// My Projects ////////////////*/
 .projects-header, .projects-sectionheader {
 	font-family: var(--font-headers), sans-serif;
