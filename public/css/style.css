@@ -208,7 +208,9 @@ nav {
 }
 /*////////////// Resume /////////////////////*/
 
-
+.resume-container {
+	
+}
 /*////////////// My Projects ////////////////*/
 .projects-header, .projects-sectionheader {
 	font-family: var(--font-headers), sans-serif;
