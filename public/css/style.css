@@ -138,50 +138,50 @@ nav {
 }
 
 /*//////////////// intro ///////////////*/
-.intro-header {
-	grid-area: intro-header;
+.about-header {
+	grid-area: about-header;
 	font-family: var(--font-headers), sans-serif;
 }
-.intro-image {
-	grid-area: intro-image;
+.about-image {
+	grid-area: about-image;
 	place-self: center center;
 	height: 85%;
 	width: 75%;
 	object-fit: cover;
 }
-.intro-text {
+.about-text {
 	font-family: var(--font-text), sans-serif;
-	grid-area: intro-text;
+	grid-area: about-text;
 	place-self: center center;
 	width: 75%;
 }
-.intro-container {
+.about-container {
 	display: grid;
 	/*grid-template-rows: 3em calc(100vh - 9.5em) 3em;*/
 	grid-template-rows: 3em auto 3em;
-	grid-template-columns: 3fr 4fr 4fr 3fr;
+	grid-template-columns: 1fr 3fr 3fr 1fr;
 	grid-template-areas: 
 		". . . ."
-		". intro-text intro-image ."
+		". about-text about-image ."
 		". . . .";
 }
 /*mobile intro*/
 @media screen
 	and (max-width: 1366px)
 	and (-webkit-min-device-pixel-ratio:  2) {
-		.intro-text {
+		.about-text {
 			width: 90%;
 		}
-		.intro-image {
+		.about-image {
 			height: 90%;
 			width: 80%;
 		}
-		.intro-container {
+		.about-container {
 			grid-template-rows: auto auto;
 			grid-template-columns: auto;
 			grid-template-areas: 
-				"intro-text"
-				"intro-image";
+				"about-text"
+				"about-image";
 		}
 	}
 /*///////////Laptop/tablet menu//////////////////////////*/
@@ -190,25 +190,28 @@ nav {
   and (min-width: 1024px) 
   and (max-device-width: 1600px) 
   and (-webkit-max-device-pixel-ratio: 2) {
-  	.intro-text {
+  	.about-text {
 		width: 90%;
 	}
-	.intro-image {
+	.about-image {
 		height: 55%;
 		width: 80%;
 	}
-  	.intro-container {
+  	.about-container {
 		grid-template-rows: 3em calc(100vh - 9.5em) 3em;
 		grid-template-columns: auto auto;
 		grid-template-areas: 
 			". ."
-			"intro-text intro-image"
+			"about-text about-image"
 			". .";
 	}
 }
 /*////////////// Resume /////////////////////*/
-.resume-header, .resume-sectionheader {
+.resume-header, .resume-sectionheader, .resume-downloadbtn {
 	font-family: var(--font-headers), sans-serif;
+}
+.resume-text {
+	font-family: var(--font-text), sans-serif;
 }
 .resume-header {
 	grid-area: resume-header;
@@ -237,7 +240,7 @@ nav {
 .resume-container {
 	display: grid;
 	grid-template-rows: auto auto auto auto auto auto 3em;
-	grid-template-columns: 1fr 6fr 2fr 1fr;
+	grid-template-columns: 1fr 4fr 2fr 1fr;
 	grid-template-areas:
 		". resume-header resume-downloadbtn ."
 		". resume-intro resume-intro ."
