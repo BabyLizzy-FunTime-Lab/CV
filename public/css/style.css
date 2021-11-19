@@ -4,6 +4,7 @@
 	--font-banner: 'Orbitron';
 	--font-headers: 'Orbitron';
 	--font-text: 'Roboto';
+	--fontweight-bold: 900;
 	/*kleuren*/
 	--color-snow: rgb(255, 250, 250);
 	--color-whitesmoke: rgb(245,245,245);
@@ -210,8 +211,17 @@ nav {
 .resume-header, .resume-sectionheader, .resume-downloadbtn {
 	font-family: var(--font-headers), sans-serif;
 }
+.resume-sectionheader h3, h4 {
+	margin: 0;
+}
 .resume-text {
 	font-family: var(--font-text), sans-serif;
+}
+.resume-text p {
+	margin: .5em 0 .5em 0;
+}
+.resume-text span {
+	font-weight: var(--fontweight-bold);
 }
 .resume-header {
 	grid-area: resume-header;
@@ -224,6 +234,27 @@ nav {
 }
 .resume-intro {
 	grid-area: resume-intro;
+}
+.resume-educationyear-1 {grid-area: resume-educationyear-1}
+.resume-educationinfo-1 {grid-area: resume-educationinfo-1}
+.resume-educationyear-2 {grid-area: resume-educationyear-2}
+.resume-educationinfo-2 {grid-area: resume-educationinfo-2}
+.resume-educationyear-3 {grid-area: resume-educationyear-3}
+.resume-educationinfo-3 {grid-area: resume-educationinfo-3}
+.resume-educationyear-4 {grid-area: resume-educationyear-4}
+.resume-educationinfo-4 {grid-area: resume-educationinfo-4}
+.resume-educationyear-5 {grid-area: resume-educationyear-5}
+.resume-educationinfo-5 {grid-area: resume-educationinfo-5}
+.resume-educationtext {
+	display: grid;
+	grid-template-rows: auto auto auto auto auto auto;
+	grid-template-columns: 1fr 5fr;
+	grid-template-areas:
+		"resume-educationyear-1 resume-educationinfo-1"
+		"resume-educationyear-2 resume-educationinfo-2"
+		"resume-educationyear-3 resume-educationinfo-3"
+		"resume-educationyear-4 resume-educationinfo-4"
+		"resume-educationyear-5 resume-educationinfo-5";
 }
 .resume-education {
 	grid-area: resume-education;
