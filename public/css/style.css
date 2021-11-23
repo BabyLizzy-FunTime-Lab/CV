@@ -10,7 +10,7 @@
 	--color-whitesmoke: rgb(245,245,245);
 	--color-steelblue: rgb(70,130,180);
 	--color-dodgerblue: rgb(30,144,255);
-	--color-menu-highlight: rgba(105, 105, 105, 0.9);
+	--color-menu: rgba(105, 105, 105, 0.9);
 	--color-schadow: rgba(0, 0, 0, 0.2);
 	--color-gainsboro: rgb(220,220,220);
 	--color-lightblack: hsl(0, 0%, 15%);
@@ -35,7 +35,7 @@ body {
 	color: var(--color-black);
 }
 .navitem:hover {
-	background-color: var(--color-menu-highlight);
+	background-color: var(--color-lightblack);
 	color: var(--color-whitesmoke);
 	transition: all ease-in-out 0.5s;
 }
@@ -64,7 +64,7 @@ nav {
 	grid-template-rows: 3.5em;
 	grid-template-areas: ". logo . intro resume projects gallery contact . ";
 	font-family: var(--font-nav), sans-serif;
-	background-color: var(--color-whitesmoke);
+	background-color: var(--color-menu);
 	position: sticky;
 	top: 0;
 }
@@ -211,6 +211,14 @@ nav {
 .resume-header, .resume-sectionheader, .resume-downloadbtn {
 	font-family: var(--font-headers), sans-serif;
 }
+.resume-header {
+	background-color: var(--color-steelblue);
+	color: var(--color-whitesmoke);
+	padding: 0 .5em 0 .5em
+}
+.resume-section {
+	padding: 2em 0 2em 0;
+}
 .resume-sectionheader h3, h4 {
 	margin: 0;
 }
@@ -259,8 +267,14 @@ nav {
 .resume-education {
 	grid-area: resume-education;
 }
+.resume-languagesheader {
+	grid-area: resume-languagesheader;
+}
 .resume-languages {
 	grid-area: resume-languages;
+	display: grid;
+	grid-template-rows: auto auto;
+	grid-template-columns: auto;
 }
 .resume-experience {
 	grid-area: resume-experience;
@@ -281,6 +295,9 @@ nav {
 		". resume-additional resume-additional ."
 		". . . .";
 }
+
+
+
 /*////////////// My Projects ////////////////*/
 .projects-header, .projects-sectionheader {
 	font-family: var(--font-headers), sans-serif;
