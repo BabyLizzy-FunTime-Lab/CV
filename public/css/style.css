@@ -138,10 +138,16 @@ nav {
 	object-fit: cover;
 }
 
-/*//////////////// intro ///////////////*/
+/*//////////////// about ///////////////*/
 .about-header {
 	grid-area: about-header;
 	font-family: var(--font-headers), sans-serif;
+	background-color: var(--color-steelblue);
+	color: var(--color-whitesmoke);
+	padding: 0 .5em 0 .5em;
+	box-sizing: border-box;
+	place-self: center center;
+	width: 75%;
 }
 .about-image {
 	grid-area: about-image;
@@ -159,18 +165,19 @@ nav {
 .about-container {
 	display: grid;
 	/*grid-template-rows: 3em calc(100vh - 9.5em) 3em;*/
-	grid-template-rows: 3em auto 3em;
+	grid-template-rows: 3em auto auto 3em;
 	grid-template-columns: 1fr 3fr 3fr 1fr;
 	grid-template-areas: 
 		". . . ."
+		". about-header about-image ."
 		". about-text about-image ."
 		". . . .";
 }
-/*mobile intro*/
+/*mobile about*/
 @media screen
 	and (max-width: 1366px)
 	and (-webkit-min-device-pixel-ratio:  2) {
-		.about-text {
+		.about-header, .about-text {
 			width: 90%;
 		}
 		.about-image {
@@ -178,14 +185,15 @@ nav {
 			width: 80%;
 		}
 		.about-container {
-			grid-template-rows: auto auto;
+			grid-template-rows: auto auto auto;
 			grid-template-columns: auto;
-			grid-template-areas: 
+			grid-template-areas:
+				"about-header" 
 				"about-text"
 				"about-image";
 		}
 	}
-/*///////////Laptop/tablet menu//////////////////////////*/
+/*///////////Laptop/tablet about//////////////////////////*/
 /* ----------- Retina Screens ----------- */
 @media screen 
   and (min-width: 1024px) 
@@ -199,10 +207,11 @@ nav {
 		width: 80%;
 	}
   	.about-container {
-		grid-template-rows: 3em calc(100vh - 9.5em) 3em;
+		grid-template-rows: 3em auto auto 3em;
 		grid-template-columns: auto auto;
 		grid-template-areas: 
 			". ."
+			"about-header about-image"
 			"about-text about-image"
 			". .";
 	}
@@ -267,14 +276,15 @@ nav {
 .resume-education {
 	grid-area: resume-education;
 }
-.resume-languagesheader {
-	grid-area: resume-languagesheader;
+.resume-languagestable {
+	margin-top: 1em;
+	text-align: left;
+	width: 100%;
+	max-width: 20em;
+	border-left: .5em solid var(--color-steelblue);
 }
 .resume-languages {
 	grid-area: resume-languages;
-	display: grid;
-	grid-template-rows: auto auto;
-	grid-template-columns: auto;
 }
 .resume-experience {
 	grid-area: resume-experience;
