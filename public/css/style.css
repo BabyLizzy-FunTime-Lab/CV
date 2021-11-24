@@ -144,6 +144,7 @@ nav {
 	font-family: var(--font-headers), sans-serif;
 	background-color: var(--color-steelblue);
 	color: var(--color-whitesmoke);
+	margin: 1.5em 0 0 0;
 	padding: 0 .5em 0 .5em;
 	box-sizing: border-box;
 	place-self: center center;
@@ -159,7 +160,7 @@ nav {
 .about-text {
 	font-family: var(--font-text), sans-serif;
 	grid-area: about-text;
-	place-self: center center;
+	place-self: stretch center;
 	width: 75%;
 }
 .about-container {
@@ -276,6 +277,9 @@ nav {
 .resume-education {
 	grid-area: resume-education;
 }
+.resume-languages {
+	grid-area: resume-languages;
+}
 .resume-languagestable {
 	margin-top: 1em;
 	text-align: left;
@@ -283,8 +287,19 @@ nav {
 	max-width: 20em;
 	border-left: .5em solid var(--color-steelblue);
 }
-.resume-languages {
-	grid-area: resume-languages;
+.resume-experience-year-1{grid-area: resume-experience-year-1;}
+.resume-experience-info-1{grid-area: resume-experience-info-1;}
+
+
+.resume-experiencetext {
+	display: grid;
+	width: 100%;	
+	grid-template-rows: repeat(9, 1fr);
+	grid-template-columns: 1fr 5fr;
+	grid-template-areas: 
+		"resume-experience-year-1 resume-experience-info-1"
+		"resume-experience-year-2 resume-experience-info-2"
+		;
 }
 .resume-experience {
 	grid-area: resume-experience;
