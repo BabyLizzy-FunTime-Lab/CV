@@ -1,6 +1,6 @@
 // Check for internet explorer
 if (window.document.documentMode) {
-	alert("please use a modern browser");
+	alert("Please use a modern browser");
 }
 // global functions
 function elementClass(classname) {
