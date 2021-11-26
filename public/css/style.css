@@ -232,14 +232,19 @@ nav {
 .resume-sectionheader h3, h4 {
 	margin: 0;
 }
+.resume-sectionheader {
+	padding: 0 0 1em 0;
+}
 .resume-text {
 	font-family: var(--font-text), sans-serif;
+	border-left: .5em solid var(--color-steelblue);
+	padding-left: .5em;
 }
 .resume-text p {
-	margin: .5em 0 .5em 0;
+	margin: 0 0 .5em 0;
 }
-.resume-text span {
-	font-weight: var(--fontweight-bold);
+.resume-education-location, .resume-experience-location {
+	font-style: italic;
 }
 .resume-header {
 	grid-area: resume-header;
@@ -281,7 +286,6 @@ nav {
 	grid-area: resume-languages;
 }
 .resume-languagestable {
-	margin-top: 1em;
 	text-align: left;
 	width: 100%;
 	max-width: 20em;
@@ -309,7 +313,8 @@ nav {
 .resume-experiencetext {
 	display: grid;
 	width: 100%;	
-	grid-template-rows: repeat(9, 1fr);
+	/*grid-template-rows: repeat(9, 1fr);*/
+	grid-auto-rows: minmax(min-content, max-content);
 	grid-template-columns: 1fr 5fr;
 	grid-template-areas: 
 		"resume-experience-year-1 resume-experience-info-1"
