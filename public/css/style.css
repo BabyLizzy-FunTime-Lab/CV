@@ -329,7 +329,15 @@ nav {
 }
 .resume-experience-info {
 	overflow-y: hidden;
+	text-overflow: ellipsis;
 	height: 2.5em;
+}
+.showmore-btn {
+	font-size: .8em;
+	color: var(--color-steelblue);
+	margin: 0;
+	border: transparent;
+	padding: 0;
 }
 .resume-experience {
 	grid-area: resume-experience;

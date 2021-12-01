@@ -7,7 +7,21 @@ function elementClass(classname) {
 	return document.getElementsByClassName(classname);
 }
 
-(function showExperience() {
+// (function showExperience() {
+// 	let classArray = Array.from(elementClass("resume-experience-info"));
+
+// 	classArray.forEach(function(element) {
+// 		element.addEventListener("click", function(event) {
+// 			classArray.forEach(function(element){
+// 				element.style.height = "2.5em";
+// 			})
+// 			this.style.transition = "all 2s";
+// 			this.style.height = "auto";
+// 		})
+// 	})
+// })();
+
+function showExperience() {
 	let classArray = Array.from(elementClass("resume-experience-info"));
 
 	classArray.forEach(function(element) {
@@ -16,6 +30,7 @@ function elementClass(classname) {
 				element.style.height = "2.5em";
 			})
 			this.style.height = "auto";
+			console.log(this.className);
 		})
 	})
-})();
+};
