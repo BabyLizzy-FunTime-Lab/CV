@@ -327,6 +327,10 @@ nav {
 		"resume-experience-year-8 resume-experience-info-8"
 		"resume-experience-year-9 resume-experience-info-9";
 }
+.resume-experience-info {
+	overflow-y: hidden;
+	height: 2.5em;
+}
 .resume-experience {
 	grid-area: resume-experience;
 }

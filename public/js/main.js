@@ -7,21 +7,15 @@ function elementClass(classname) {
 	return document.getElementsByClassName(classname);
 }
 
+(function showExperience() {
+	let classArray = Array.from(elementClass("resume-experience-info"));
 
-// elementClass("resume-experience-info").addEventListener("click", function(event) {
-// 	event.preventDefault();
-// 	this.style.backgroundColor = "red";
-// })
-
-function showExperience() {
-	let classArray = elementClass("resume-experience-info");
-	console.log(classArray);
-
-	Array.from(classArray).forEach(function(element) {
+	classArray.forEach(function(element) {
 		element.addEventListener("click", function(event) {
-			this.style.backgroundColor = "red";
+			classArray.forEach(function(element){
+				element.style.height = "2.5em";
+			})
+			this.style.height = "auto";
 		})
 	})
-
-}
-showExperience();
+})();
