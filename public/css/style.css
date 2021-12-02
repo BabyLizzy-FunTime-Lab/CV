@@ -291,24 +291,24 @@ nav {
 	max-width: 20em;
 	border-left: .5em solid var(--color-steelblue);
 }
-.resume-experience-year-1{grid-area: resume-experience-year-1;}
-.resume-experience-info-1{grid-area: resume-experience-info-1;}
-.resume-experience-year-2{grid-area: resume-experience-year-2;}
-.resume-experience-info-2{grid-area: resume-experience-info-2;}
-.resume-experience-year-3{grid-area: resume-experience-year-3;}
-.resume-experience-info-3{grid-area: resume-experience-info-3;}
-.resume-experience-year-4{grid-area: resume-experience-year-4;}
-.resume-experience-info-4{grid-area: resume-experience-info-4;}
-.resume-experience-year-5{grid-area: resume-experience-year-5;}
-.resume-experience-info-5{grid-area: resume-experience-info-5;}
-.resume-experience-year-6{grid-area: resume-experience-year-6;}
-.resume-experience-info-6{grid-area: resume-experience-info-6;}
-.resume-experience-year-7{grid-area: resume-experience-year-7;}
-.resume-experience-info-7{grid-area: resume-experience-info-7;}
-.resume-experience-year-8{grid-area: resume-experience-year-8;}
-.resume-experience-info-8{grid-area: resume-experience-info-8;}
-.resume-experience-year-9{grid-area: resume-experience-year-9;}
-.resume-experience-info-9{grid-area: resume-experience-info-9;}
+#resume-experience-year-1{grid-area: resume-experience-year-1;}
+#resume-experience-info-1{grid-area: resume-experience-info-1;}
+#resume-experience-year-2{grid-area: resume-experience-year-2;}
+#resume-experience-info-2{grid-area: resume-experience-info-2;}
+#resume-experience-year-3{grid-area: resume-experience-year-3;}
+#resume-experience-info-3{grid-area: resume-experience-info-3;}
+#resume-experience-year-4{grid-area: resume-experience-year-4;}
+#resume-experience-info-4{grid-area: resume-experience-info-4;}
+#resume-experience-year-5{grid-area: resume-experience-year-5;}
+#resume-experience-info-5{grid-area: resume-experience-info-5;}
+#resume-experience-year-6{grid-area: resume-experience-year-6;}
+#resume-experience-info-6{grid-area: resume-experience-info-6;}
+#resume-experience-year-7{grid-area: resume-experience-year-7;}
+#resume-experience-info-7{grid-area: resume-experience-info-7;}
+#resume-experience-year-8{grid-area: resume-experience-year-8;}
+#resume-experience-info-8{grid-area: resume-experience-info-8;}
+#resume-experience-year-9{grid-area: resume-experience-year-9;}
+#resume-experience-info-9{grid-area: resume-experience-info-9;}
 
 .resume-experiencetext {
 	display: grid;
@@ -329,7 +329,6 @@ nav {
 }
 .resume-experience-info {
 	overflow-y: hidden;
-	text-overflow: ellipsis;
 	height: 2.5em;
 }
 .showmore-btn {
