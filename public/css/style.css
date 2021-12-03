@@ -241,7 +241,7 @@ nav {
 	padding-left: .5em;
 }
 .resume-text p {
-	margin: 0 0 .5em 0;
+	margin: 0;
 }
 .resume-education-location, .resume-experience-location {
 	font-style: italic;
@@ -309,11 +309,13 @@ nav {
 #resume-experience-info-8{grid-area: resume-experience-info-8;}
 #resume-experience-year-9{grid-area: resume-experience-year-9;}
 #resume-experience-info-9{grid-area: resume-experience-info-9;}
-
+.resume-experience-info {
+	margin: 0 0 .5em 0;
+	transition: all ease-in-out 0.5s;
+}
 .resume-experiencetext {
 	display: grid;
-	width: 100%;	
-	/*grid-template-rows: repeat(9, 1fr);*/
+	width: 100%;
 	grid-auto-rows: minmax(min-content, max-content);
 	grid-template-columns: 1fr 5fr;
 	grid-template-areas: 
@@ -327,9 +329,13 @@ nav {
 		"resume-experience-year-8 resume-experience-info-8"
 		"resume-experience-year-9 resume-experience-info-9";
 }
-.resume-experience-info {
-	overflow-y: hidden;
-	height: 2.5em;
+.resume-experience-story {
+	display: none;
+	opacity: 0;
+}
+.resume-experience-story-show {
+	opacity: 1;
+	transition: all 2s;
 }
 .showmore-btn {
 	font-size: .8em;
