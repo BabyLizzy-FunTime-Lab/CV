@@ -130,6 +130,7 @@ nav {
 .banner-message {
 	grid-area: welcome;
 	font-size: 1.5em;
+	text-align: right;
 }
 .banner-image {
 	grid-area: bannerImage;
@@ -255,19 +256,19 @@ nav {
 	height: 50%;
 	place-self: center;
 }
-.resume-intro {
+#resume-intro {
 	grid-area: resume-intro;
 }
-.resume-educationyear-1 {grid-area: resume-educationyear-1}
-.resume-educationinfo-1 {grid-area: resume-educationinfo-1}
-.resume-educationyear-2 {grid-area: resume-educationyear-2}
-.resume-educationinfo-2 {grid-area: resume-educationinfo-2}
-.resume-educationyear-3 {grid-area: resume-educationyear-3}
-.resume-educationinfo-3 {grid-area: resume-educationinfo-3}
-.resume-educationyear-4 {grid-area: resume-educationyear-4}
-.resume-educationinfo-4 {grid-area: resume-educationinfo-4}
-.resume-educationyear-5 {grid-area: resume-educationyear-5}
-.resume-educationinfo-5 {grid-area: resume-educationinfo-5}
+#resume-educationyear-1 {grid-area: resume-educationyear-1}
+#resume-educationinfo-1 {grid-area: resume-educationinfo-1}
+#resume-educationyear-2 {grid-area: resume-educationyear-2}
+#resume-educationinfo-2 {grid-area: resume-educationinfo-2}
+#resume-educationyear-3 {grid-area: resume-educationyear-3}
+#resume-educationinfo-3 {grid-area: resume-educationinfo-3}
+#resume-educationyear-4 {grid-area: resume-educationyear-4}
+#resume-educationinfo-4 {grid-area: resume-educationinfo-4}
+#resume-educationyear-5 {grid-area: resume-educationyear-5}
+#resume-educationinfo-5 {grid-area: resume-educationinfo-5}
 .resume-educationtext {
 	display: grid;
 	grid-template-rows: auto auto auto auto auto auto;
@@ -282,15 +283,17 @@ nav {
 .resume-education {
 	grid-area: resume-education;
 }
-.resume-languages {
+/*//////////// Languages /////////////*/
+#resume-languages {
 	grid-area: resume-languages;
 }
-.resume-languagestable {
+#resume-languagestable {
 	text-align: left;
 	width: 100%;
 	max-width: 20em;
 	border-left: .5em solid var(--color-steelblue);
 }
+/*/////////// education //////////////*/
 #resume-experience-year-1{grid-area: resume-experience-year-1;}
 #resume-experience-info-1{grid-area: resume-experience-info-1;}
 #resume-experience-year-2{grid-area: resume-experience-year-2;}
@@ -313,7 +316,7 @@ nav {
 	margin: 0 0 .5em 0;
 	transition: all ease-in-out 0.5s;
 }
-.resume-experiencetext {
+#resume-experiencetext {
 	display: grid;
 	width: 100%;
 	grid-auto-rows: minmax(min-content, max-content);
@@ -344,12 +347,14 @@ nav {
 	border: transparent;
 	padding: 0;
 }
-.resume-experience {
+#resume-experience {
 	grid-area: resume-experience;
 }
-.resume-additional {
+/*//////////// additional info ///////////*/
+#resume-additional {
 	grid-area: resume-additional;
 }
+/*/////////// resume grid layout /////////*/
 .resume-container {
 	display: grid;
 	grid-template-rows: auto auto auto auto auto auto 3em;
@@ -367,28 +372,28 @@ nav {
 
 
 /*////////////// My Projects ////////////////*/
-.projects-header, .projects-sectionheader {
+#projects-header, .projects-sectionheader {
 	font-family: var(--font-headers), sans-serif;
 }
 .projects-text {
 	font-family: var(--font-text), sans-serif;
 }
-.projects-header {
+#projects-header {
 	grid-area: projects-header;
 }
-.projects-gitaar {
+#projects-gitaar {
 	grid-area: projects-gitaar;
 }
-.projects-moviebuff {
+#projects-moviebuff {
 	grid-area: projects-moviebuff;
 }
-.projects-ninjarun {
+#projects-ninjarun {
 	grid-area: projects-ninjarun;
 }
-.projects-resume {
+#projects-resume {
 	grid-area: projects-resume;
 }
-.projects-container {
+#projects-container {
 	display: grid;
 	grid-template-rows: 3em auto auto auto auto auto 3em;
 	grid-template-columns: 1fr 6fr 1fr;
@@ -424,53 +429,56 @@ nav {
 		"projects-text projects-image"
 }
 /*/////////////// Gallery ///////////////*/
-.gallery { font-family: var(--font-headers);, sans-serif; }
-.gallery-image-1 {
+#gallery-image-1 {
 	grid-area: image-1;
 	background-color: blue;
 }
-.gallery-image-2 {
+#gallery-image-2 {
 	grid-area: image-2;
 	background-color: lightgrey;
 }
-.gallery-image-3 {
+#gallery-image-3 {
 	grid-area: image-3;
 	background-color: black;
 }
-.gallery-image-4 {
+#gallery-image-4 {
 	grid-area: image-4;
 	background-color: grey;
 }
-.gallery-image-5 {
+#gallery-image-5 {
 	grid-area: image-5;
 	background-color: orange;
 }
-.gallery-image-6 {
+#gallery-image-6 {
 	grid-area: image-6;
 	background-color: purple;
 }
-.gallery-image-7 {
+#gallery-image-7 {
 	grid-area: image-7;
 	background-color: red;
 }
-.gallery-image-8 {
+#gallery-image-8 {
 	grid-area: image-8;
 	background-color: green;
 }
 .gallery-tile {
 	height: 100%;
+	max-height: 19em;
 	width: 100%;
+	max-width: 19em;
 	object-fit: cover;
+	place-self: center;
 }
-.gallery-frame {
+#gallery-frame {
 	grid-area: gallery-frame;
 }
-.gallery-header {
+#gallery-header {
 	grid-area: gallery-header;
 	place-self: center left;
+	font-family: var(--font-headers);, sans-serif;
 }
-.gallery-header h2 { margin: 0; }
-.gallery-container {
+#gallery-header h2 { margin: 0; }
+#gallery-container {
 	display: grid;
 	grid-template-rows: calc(100vh - 6.5em) 3em;
 	grid-template-columns: 1fr 6fr 1fr;
@@ -478,7 +486,7 @@ nav {
 		". gallery-frame ."
 		". . .";
 }
-.gallery-frame {
+#gallery-frame {
 	display: grid;
 	grid-template-rows: 3em 30vh 30vh;
 	grid-template-columns: auto auto auto auto;
@@ -488,10 +496,11 @@ nav {
 		"image-5 image-6 image-7 image-8";
 	place-self: center stretch;
 }
-.footer--info {
+/*/////////// footer /////////////*/
+#footer-info {
 	grid-area: footerInfo;
 }
-.footer--image {
+#footer-image {
 	grid-area: footerImage;
 	height: 100%;
 	width: 100%;
