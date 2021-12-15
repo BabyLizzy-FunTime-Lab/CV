@@ -514,3 +514,7 @@ footer {
 	grid-template-columns: 3em 5fr 3fr 3em;
 	grid-template-areas: ". footerInfo footerImage footerImage";
 }
+#footer-image {
+  /*border-radius: 20% 0 0 100%;*/
+  clip-path: polygon(80% 0, 0% 80%, 100% 100%);
+}
