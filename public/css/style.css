@@ -67,6 +67,7 @@ nav {
 	background-color: var(--color-menu);
 	position: sticky;
 	top: 0;
+	z-index: 1;
 }
 /*Mobiel nav*/
 @media screen
@@ -119,6 +120,8 @@ nav {
 .banner-container {
 	font-family: var(--font-banner), sans-serif;
 	background-color: var(--color-steelblue);
+	clip-path: polygon(0% 0%, 0 100%, 15% 100%, 0 89%, 0 79%, 17% 95%, 96% 94%, 13% 100%, 100% 100%, 100% 0%);
+	/*clip-path: polygon(0% 0%, 0 100%, 11% 100%, 0 89%, 0 79%, 15% 93%, 100% 93%, 12% 100%, 100% 100%, 100% 0%);*/
 	display: grid;
 	grid-template-rows: 3em calc(100vh - 9.5em) 3em;
 	grid-template-columns: 3em 2fr .5fr 4fr 3em;
@@ -286,6 +289,9 @@ nav {
 }
 .resume-education {
 	grid-area: resume-education;
+}
+.resume-educationinfo {
+	padding: 0 0 .5em 0;
 }
 /*//////////// Languages /////////////*/
 #resume-languages {
