@@ -390,12 +390,9 @@ nav {
 #projects-ninjarun {
 	grid-area: projects-ninjarun;
 }
-#projects-resume {
-	grid-area: projects-resume;
-}
 #projects-container {
 	display: grid;
-	grid-template-rows: 3em auto auto auto auto auto 3em;
+	grid-template-rows: 3em auto auto auto auto 3em;
 	grid-template-columns: 1fr 6fr 1fr;
 	grid-template-areas:
 		". . ."
@@ -403,7 +400,6 @@ nav {
 		". projects-gitaar ."
 		". projects-moviebuff ."
 		". projects-ninjarun ."
-		". projects-resume ."
 		". . .";
 }
 .projects-sectionheader {
@@ -417,12 +413,18 @@ nav {
 	width: 70%;
 	height: 90%;
 }
+#projects-ninjarun-image {
+	background-color: var(--color-whitesmoke);
+}
+#projects-moviebuff-image {
+	place-self: left;
+}
 .projects-text {
 	grid-area: projects-text;
 }
 .projects-section {
 	display: grid;
-	grid-template-rows: auto 25em;
+	grid-template-rows: auto auto;
 	grid-template-columns: 2fr 1fr;
 	grid-template-areas:
 		"projects-sectionheader projects-sectionheader"
@@ -507,6 +509,7 @@ nav {
 	object-fit: cover;
 }
 footer {
+	clip-path: polygon(0 -5%, 100% 6%, 100% 100%, 0% 100%);
 	font-family: var(--font-headers);, sans-serif;
 	background-color: var(--color-steelblue);
 	display: grid;
@@ -515,6 +518,5 @@ footer {
 	grid-template-areas: ". footerInfo footerImage footerImage";
 }
 #footer-image {
-  /*border-radius: 20% 0 0 100%;*/
-  clip-path: polygon(80% 0, 0% 80%, 100% 100%);
+  clip-path: polygon(80% 5%, 0% 80%, 100% 100%);
 }
