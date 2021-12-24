@@ -113,27 +113,28 @@ nav {
 		}
 	}
 /*//////////////////banner ///////////////*/
-.banner-container {
+#banner-container {
 	font-family: var(--font-banner), sans-serif;
 	background-color: var(--color-steelblue);
 	clip-path: polygon(0% 0%, 0 100%, 15% 100%, 0 89%, 0 79%, 17% 95%, 96% 94%, 13% 100%, 100% 100%, 100% 0%);
-	display: grid;
-	grid-template-rows: 3em calc(100vh - 9.5em) 3em;
-	grid-template-columns: 3em 2fr .5fr 4fr 3em;
-	grid-template-areas:
-		". . . . ."
-		". welcome . bannerImage ."
-		". . . . .";
+	height: calc(100vh - 4em);
 }
-.banner-message {
-	grid-area: welcome;
-	font-size: 1.5em;
+#banner-message {
+	font-size: 1.2em;
 	text-align: right;
+	width: 90%;
+	margin: auto;
+	padding-top: 1em;
 }
-.banner-image {
-	clip-path: polygon(3% 0, 100% 0%, 97% 100%, 0% 100%);
-	grid-area: bannerImage;
-	height: 100%;
+#banner-message h1 {
+	margin: 0 0 .5em 0;
+}
+#banner-message p {
+	margin: .5em 0 0 0;
+}
+#banner-image {
+	clip-path: polygon(3% 0, 100% 0, 96% 99%, 6% 100%, 0 93%);
+	height: calc(100vh - 14em);
 	width: 100%;
 	object-fit: cover;
 }
@@ -241,7 +242,7 @@ nav {
 }
 .resume-text {
 	font-family: var(--font-text), sans-serif;
-	border-left: .5em solid var(--color-steelblue);
+	border-left: .3em solid var(--color-steelblue);
 	padding-left: .5em;
 }
 .resume-text p {
@@ -297,7 +298,7 @@ nav {
 	text-align: left;
 	width: 100%;
 	max-width: 20em;
-	border-left: .5em solid var(--color-steelblue);
+	border-left: .3em solid var(--color-steelblue);
 }
 /*/////////// education //////////////*/
 #resume-experience-year-1{grid-area: resume-experience-year-1;}
@@ -364,7 +365,7 @@ nav {
 .resume-container {
 	display: grid;
 	grid-template-rows: auto auto auto auto auto auto 3em;
-	grid-template-columns: 1fr 4fr 2fr 1fr;
+	grid-template-columns: .2fr 4fr 2fr .2fr;
 	grid-template-areas:
 		". resume-header resume-downloadbtn ."
 		". resume-intro resume-intro ."
