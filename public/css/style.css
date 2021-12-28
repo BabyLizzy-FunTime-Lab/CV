@@ -10,7 +10,7 @@
 	--color-whitesmoke: rgb(245,245,245);
 	--color-steelblue: rgb(70,130,180);
 	--color-dodgerblue: rgb(30,144,255);
-	--color-menu: rgba(105, 105, 105, 0.9);
+	--color-nav: rgb(245,245,245, 0.9);
 	--color-schadow: rgba(0, 0, 0, 0.2);
 	--color-gainsboro: rgb(220,220,220);
 	--color-lightblack: hsl(0, 0%, 15%);
@@ -60,7 +60,7 @@ nav {
 	grid-template-rows: 3.5em;
 	grid-template-areas: ". logo . intro resume projects gallery contact . ";
 	font-family: var(--font-nav), sans-serif;
-	background-color: var(--color-menu);
+	background-color: var(--color-nav);
 	position: sticky;
 	top: 0;
 	z-index: 1;
@@ -230,8 +230,10 @@ nav {
 }
 .resume-downloadbtn {
 	grid-area: resume-downloadbtn;
-	width: 75%;
-	height: 50%;
+	min-width: fit-content;
+	width: 70%;
+	min-height: fit-content;
+	height: 60%;
 	place-self: center;
 }
 #resume-intro {
@@ -303,6 +305,7 @@ nav {
 #resume-experiencetext {
 	display: grid;
 	width: 100%;
+	box-sizing: border-box;
 	grid-auto-rows: minmax(min-content, max-content);
 	grid-template-columns: 1fr 5fr;
 	grid-template-areas: 
@@ -340,17 +343,20 @@ nav {
 }
 /*/////////// resume grid layout /////////*/
 .resume-container {
+	width: 100%;
+	max-width: 60em;
+	margin: auto;
 	display: grid;
 	grid-template-rows: auto auto auto auto auto auto 3em;
-	grid-template-columns: .2fr 4fr 2fr .2fr;
+	grid-template-columns: 2fr 1fr ;
 	grid-template-areas:
-		". resume-header resume-downloadbtn ."
-		". resume-intro resume-intro ."
-		". resume-education resume-education ."
-		". resume-languages resume-languages ."
-		". resume-experience resume-experience ."
-		". resume-additional resume-additional ."
-		". . . .";
+		"resume-header resume-downloadbtn"
+		"resume-intro resume-intro"
+		"resume-education resume-education"
+		"resume-languages resume-languages"
+		"resume-experience resume-experience"
+		"resume-additional resume-additional"
+		". .";
 }
 
 
@@ -359,11 +365,19 @@ nav {
 #projects-header, .projects-sectionheader {
 	font-family: var(--font-headers), sans-serif;
 }
-.projects-text {
+#projects-introtext, .projects-text {
 	font-family: var(--font-text), sans-serif;
 }
 #projects-header {
+	background-color: var(--color-steelblue);
+	color: var(--color-whitesmoke);
+	padding: 0 .5em 0 .5em;
+}
+#projects-header {
 	grid-area: projects-header;
+}
+#projects-introtext {
+	grid-area: projects-introtext;
 }
 #projects-gitaar {
 	grid-area: projects-gitaar;
@@ -375,16 +389,20 @@ nav {
 	grid-area: projects-ninjarun;
 }
 #projects-container {
+	width: 100%;
+	max-width: 60em;
+	margin: auto;
 	display: grid;
-	grid-template-rows: 3em auto auto auto auto 3em;
-	grid-template-columns: 1fr 6fr 1fr;
+	grid-template-rows: 3em auto auto auto auto auto 3em;
+	grid-template-columns: auto;
 	grid-template-areas:
-		". . ."
-		". projects-header ."
-		". projects-gitaar ."
-		". projects-moviebuff ."
-		". projects-ninjarun ."
-		". . .";
+		"."
+		"projects-header"
+		"projects-introtext"
+		"projects-gitaar"
+		"projects-moviebuff"
+		"projects-ninjarun"
+		".";
 }
 .projects-sectionheader {
 	grid-area: projects-sectionheader;
@@ -483,23 +501,36 @@ nav {
 	place-self: center stretch;
 }
 /*/////////// footer /////////////*/
+#footer-header {
+	grid-area: footer-header;
+	font-family: var(--font-headers);, sans-serif;
+	color: var(--color-gainsboro);
+}
+#footer-header h2 {
+	margin: .5em 0 0 0;
+	font-size: 2.5em;
+}
 #footer-info {
-	grid-area: footerInfo;
+	grid-area: footer-info;
+	font-family: var(--font-text);
+	text-decoration: none;
 }
 #footer-image {
-	grid-area: footerImage;
+	grid-area: footer-image;
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
 }
-footer {
+#footer-container {
 	clip-path: polygon(0 -5%, 100% 6%, 100% 100%, 0% 100%);
-	font-family: var(--font-headers);, sans-serif;
 	background-color: var(--color-steelblue);
+	height: 20em;
 	display: grid;
-	grid-template-rows: 18em;
-	grid-template-columns: 3em 5fr 3fr 3em;
-	grid-template-areas: ". footerInfo footerImage footerImage";
+	grid-template-rows: minmax(min-content, max-content) minmax(min-content, 15em);
+	grid-template-columns: 4fr 2fr;
+	grid-template-areas: 
+		"footer-header footer-image"
+		"footer-info footer-image"
 }
 #footer-image {
   clip-path: polygon(80% 5%, 0% 80%, 100% 100%);
