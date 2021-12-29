@@ -552,11 +552,17 @@ nav {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
+  	clip-path: polygon(80% 5%, 0% 80%, 100% 100%);	
+}
+#footer-container a {
+	text-decoration: none;
+	color: var(--color-whitesmoke);
 }
 #footer-container {
-	clip-path: polygon(0 -5%, 100% 6%, 100% 100%, 0% 100%);
-	background-color: var(--color-steelblue);
 	height: 20em;
+	width: 100%;
+	max-width: 70em;
+	margin: auto;
 	display: grid;
 	grid-template-rows: minmax(min-content, max-content) minmax(min-content, 15em) minmax(min-content, max-content) minmax(min-content, max-content);
 	grid-template-columns: .5fr 2fr 2fr 1.5fr;
@@ -566,10 +572,7 @@ nav {
 		". footer-linkedin footer-github footer-image"
 		". footer-copyright footer-copyright footer-image";
 }
-#footer-container a {
-	text-decoration: none;
-	color: var(--color-whitesmoke);
-}
-#footer-image {
-  clip-path: polygon(80% 5%, 0% 80%, 100% 100%);
+footer {
+	clip-path: polygon(0 -5%, 100% 6%, 100% 100%, 0% 100%);
+	background-color: var(--color-steelblue);
 }
