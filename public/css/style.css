@@ -485,14 +485,6 @@ nav {
 	margin: 0;
 	color: var(--color-whitesmoke);
 }
-/*#gallery-container {
-	display: grid;
-	grid-template-rows: calc(100vh - 6.5em) 3em;
-	grid-template-columns: 1fr 6fr 1fr;
-	grid-template-areas:
-		". gallery-frame ."
-		". . .";
-}*/
 #gallery-container {
 	width: 100%;
 	max-width: 60em;
