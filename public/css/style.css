@@ -373,12 +373,17 @@ nav {
 	background-color: var(--color-steelblue);
 	color: var(--color-whitesmoke);
 	padding: 0 .5em 0 .5em;
+	text-align: center;
 }
 #projects-header {
 	grid-area: projects-header;
 }
 #projects-introtext {
 	grid-area: projects-introtext;
+}
+#projects-introtext p {
+	margin-top: .5em;
+	text-align: center;
 }
 #projects-gitaar {
 	grid-area: projects-gitaar;
@@ -393,6 +398,8 @@ nav {
 	width: 100%;
 	max-width: 60em;
 	margin: auto;
+	padding: 0 .5em 0 .5em;
+	box-sizing: border-box;
 	display: grid;
 	grid-template-rows: 3em auto auto auto auto auto 3em;
 	grid-template-columns: auto;
@@ -407,31 +414,42 @@ nav {
 }
 .projects-sectionheader {
 	grid-area: projects-sectionheader;
+	text-align: center;
 }
 .projects-image {
 	grid-area: projects-image;
 	background-color: var(--color-lightgrey);
 	place-self: center;
 	object-fit: cover;
-	width: 70%;
-	height: 90%;
+	width: 100%;
+	height: 3.5em;
+}
+#projects-gitaar-image {
+	object-position: bottom;
 }
 #projects-ninjarun-image {
 	background-color: var(--color-whitesmoke);
+	object-position: center -2em;
 }
 #projects-moviebuff-image {
 	place-self: left;
 }
 .projects-text {
 	grid-area: projects-text;
+	text-align: center;
 }
 .projects-section {
+	margin: .5em auto .5em auto;
+	padding: .5em .2em .5em .2em;
+	width: 90%;
+	border: 2px solid var(--color-steelblue);
+	box-sizing: border-box;
 	display: grid;
-	grid-template-rows: auto auto;
-	grid-template-columns: 2fr 1fr;
+	grid-template-rows: minmax(min-content, max-content), auto;
+	grid-template-columns: 1fr 1fr;
 	grid-template-areas:
-		"projects-sectionheader projects-sectionheader"
-		"projects-text projects-image"
+		"projects-sectionheader projects-image"
+		"projects-text projects-text";
 }
 /*/////////////// Gallery ///////////////*/
 #gallery-image-1 {
