@@ -505,10 +505,20 @@ nav {
 }
 .gallery-tile {
 	height: 100%;
-	max-height: 20em;
 	width: 100%;
+	max-height: 20em;
+	
+	overflow: hidden;
+}
+.gallery-tileimage {
+	transition: transform .2s;
+	width: inherit;
+	max-height: inherit;
 	object-fit: cover;
 	place-self: center;
+}
+.gallery-tileimage:hover {
+	transform: scale(1.1);
 }
 #gallery-frame {
 	grid-area: gallery-frame;
