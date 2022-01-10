@@ -13,6 +13,7 @@ function elementID(id) {
 	return document.getElementById(id);
 }
 
+//Experience section text reveal function
 (function showExperience() {
 	let classArray = Array.from(elementClass("showmore-btn"));
 

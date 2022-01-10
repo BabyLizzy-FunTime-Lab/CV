@@ -506,19 +506,22 @@ nav {
 .gallery-tile {
 	height: 100%;
 	width: 100%;
-	max-height: 20em;
-	
 	overflow: hidden;
+	margin: 0;
 }
 .gallery-tileimage {
 	transition: transform .2s;
-	width: inherit;
-	max-height: inherit;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
 	place-self: center;
 }
 .gallery-tileimage:hover {
 	transform: scale(1.1);
+}
+.gallery-tiletext {
+	display: hidden;
+	height: 0;
 }
 #gallery-frame {
 	grid-area: gallery-frame;
@@ -546,7 +549,7 @@ nav {
 	max-width: 50em;
 	margin: auto;
 	display: grid;
-	grid-template-rows: repeat(4, minmax(min-content, max-content));
+	grid-template-rows: repeat(4, minmax(1fr, 1fr));
 	grid-template-columns: 1fr 1fr;
 	grid-template-areas: 
 		"image-1 image-2"
