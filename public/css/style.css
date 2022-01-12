@@ -523,6 +523,9 @@ nav {
 	display: hidden;
 	height: 0;
 }
+figcaption {
+	font-family: var(--font-text);
+}
 #gallery-frame {
 	grid-area: gallery-frame;
 }

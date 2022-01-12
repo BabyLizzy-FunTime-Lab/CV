@@ -44,9 +44,11 @@ function elementID(id) {
 
 // Image viewer for the gallery
 (function imageViewer() {
-	let color_whitesmoke = "rgb(245,245,245)"
+	let color_whitesmoke = "rgb(245,245,245)";
 	let color_blackfade = "rgba(0, 0, 0, 0.9)";
-	let color_black = "rgb(0, 0, 0)"
+	let color_black = "rgb(0, 0, 0)";
+	let close_background = "url(/image/lizzy_art_square.jpg)";
+	let close_Xshape = "polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%)";
 
 	let imageArray = Array.from(elementClass("gallery-tileimage"));
 
@@ -68,24 +70,40 @@ function elementID(id) {
 			viewerContainer.style.backgroundColor = color_blackfade;
 
 			let figure = document.createElement("figure");
-			figure.style.height = "90vh";
-			figure.style.maxHeight = "60em";
-			figure.style.width = "95vw";
-			figure.style.maxWidth = "60em"
+			figure.style.display = "flex";
+			figure.style.flexDirection = "column";
 			figure.style.margin = "0";
+			figure.style.padding = "0 0.2em 0 0.2em";
 			figure.style.backgroundColor = color_black;
 			
 			let close = document.createElement("div");
-			close.setAttribute("style", "width:4em;height:4em;");
-			close.style.backgroundImage = "../image/lizzy_art_square.jpg";
-			close.style.clipPath = "clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);"
-			
+			close.setAttribute("style", "width:2em;height:2em;margin: .5em auto .5em auto;");
+			close.style.backgroundImage = close_background;
+			close.style.backgroundColor = color_whitesmoke;
+			close.style.clipPath = close_Xshape;
+			close.style.backgroundPosition = "center";
+			close.style.backgroundSize = "cover";
+			close.addEventListener("click", function(event) {
+				elementID("imageViewer").remove();
+			})
+
 			let image = document.createElement("img");
 			image.setAttribute("src", imagesource);
-			image.setAttribute("style", "width:100%;max-width:40em;height:80%;max-height:40em;margin:auto;");
+			function landscapeMobile(size) {
+				if(size.matches) {
+					image.setAttribute("style", "width:100%;height:100%;max-height:15em;object-position:center;object-fit:contain;");
+				} else {
+					image.setAttribute("style", "width:100%;height:100%;max-height:40em;object-position:center;object-fit:contain;");
+				}
+			}
+			let landscape_Size = window.matchMedia("(max-height: 600px)"); 
+			landscapeMobile(landscape_Size);
+			landscape_Size.addListener(landscapeMobile);
 			
 			let caption = document.createElement("figcaption");
 			caption.style.color = color_whitesmoke;
+			caption.style.textAlign = "center";
+			caption.style.margin = ".4em 0 .4em 0";
 			caption.innerText = imageText;
 
 			figure.appendChild(close);
