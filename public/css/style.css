@@ -205,10 +205,10 @@ nav {
 }
 
 /*////////////// Resume /////////////////////*/
-.resume-header, .resume-sectionheader, .resume-downloadbtn {
+#resume-header, .resume-sectionheader, #resume-downloadbtn {
 	font-family: var(--font-headers), sans-serif;
 }
-.resume-header {
+#resume-header {
 	background-color: var(--color-steelblue);
 	color: var(--color-whitesmoke);
 	padding: 0 .5em 0 .5em
@@ -236,7 +236,7 @@ nav {
 .resume-header {
 	grid-area: resume-header;
 }
-.resume-downloadbtn {
+#resume-downloadbtn {
 	grid-area: resume-downloadbtn;
 	min-width: fit-content;
 	width: 70%;
@@ -350,9 +350,11 @@ nav {
 	grid-area: resume-additional;
 }
 /*/////////// resume grid layout /////////*/
-.resume-container {
+#resume-container {
 	width: 100%;
 	max-width: 60em;
+	box-sizing: border-box;
+	padding: 0 .5em 0 .5em;
 	margin: auto;
 	display: grid;
 	grid-template-rows: auto auto auto auto auto auto 3em;
