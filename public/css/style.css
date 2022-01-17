@@ -205,36 +205,18 @@ nav {
 }
 
 /*////////////// Resume /////////////////////*/
+#resume-container {
+	width: 100%;
+	max-width: 60em;
+	box-sizing: border-box;
+	padding: 0 .5em 0 .5em;
+	margin: auto;
+}
 #resume-header, .resume-sectionheader, #resume-downloadbtn {
 	font-family: var(--font-headers), sans-serif;
 }
-#resume-header {
-	background-color: var(--color-steelblue);
-	color: var(--color-whitesmoke);
-	padding: 0 .5em 0 .5em
-}
-.resume-section {
-	padding: 2em 0 2em 0;
-}
-.resume-sectionheader h3, h4 {
-	margin: 0;
-}
-.resume-sectionheader {
-	padding: 0 0 1em 0;
-}
-.resume-text {
-	font-family: var(--font-text), sans-serif;
-	border-left: .3em solid var(--color-steelblue);
-	padding-left: .5em;
-}
-.resume-text p {
-	margin: 0;
-}
-.resume-education-location, .resume-experience-location {
-	font-style: italic;
-}
-.resume-header {
-	grid-area: resume-header;
+#resume-header-title {
+	grid-area: resume-header-title;
 }
 #resume-downloadbtn {
 	grid-area: resume-downloadbtn;
@@ -244,39 +226,54 @@ nav {
 	height: 60%;
 	place-self: center;
 }
+#resume-header {
+	background-color: var(--color-steelblue);
+	color: var(--color-whitesmoke);
+	padding: 0 .5em 0 .5em;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: "resume-header-title resume-downloadbtn";
+}
+.resume-section {
+	padding: 2em .5em 2em .5em;
+	box-sizing: border-box;
+}
+.resume-sectionheader h3, h4 {
+	margin: 0;
+}
+.resume-sectionheader {
+	padding: 0 0 1em 0;
+}
+.resume-text p {
+	margin: 0;
+}
+.resume-education-location, .resume-experience-location, .resume-education-year, .resume-experience-year {
+	font-style: italic;
+}
+
+.resume-text {
+	font-family: var(--font-text), sans-serif;
+	border-left: .3em solid var(--color-steelblue);
+	padding-left: .5em;
+}
 #resume-intro {
 	grid-area: resume-intro;
 }
-#resume-introtext p {
+#resume-intro-text p {
 	margin: .4em 0 .4em 0;
 }
-#resume-educationyear-1 {grid-area: resume-educationyear-1}
-#resume-educationinfo-1 {grid-area: resume-educationinfo-1}
-#resume-educationyear-2 {grid-area: resume-educationyear-2}
-#resume-educationinfo-2 {grid-area: resume-educationinfo-2}
-#resume-educationyear-3 {grid-area: resume-educationyear-3}
-#resume-educationinfo-3 {grid-area: resume-educationinfo-3}
-#resume-educationyear-4 {grid-area: resume-educationyear-4}
-#resume-educationinfo-4 {grid-area: resume-educationinfo-4}
-#resume-educationyear-5 {grid-area: resume-educationyear-5}
-#resume-educationinfo-5 {grid-area: resume-educationinfo-5}
-.resume-educationtext {
-	display: grid;
-	grid-template-rows: auto auto auto auto auto auto;
-	grid-template-columns: 1fr 5fr;
-	grid-template-areas:
-		"resume-educationyear-1 resume-educationinfo-1"
-		"resume-educationyear-2 resume-educationinfo-2"
-		"resume-educationyear-3 resume-educationinfo-3"
-		"resume-educationyear-4 resume-educationinfo-4"
-		"resume-educationyear-5 resume-educationinfo-5";
+
+.resume-education-info {
+	margin: 0 0 1em 0;
 }
-.resume-education {
+.resume-education-year {
+	padding-bottom: .5em;
+}
+#resume-education {
 	grid-area: resume-education;
 }
-.resume-educationinfo {
-	padding: 0 0 .5em 0;
-}
+
 /*//////////// Languages /////////////*/
 #resume-languages {
 	grid-area: resume-languages;
@@ -287,49 +284,15 @@ nav {
 	max-width: 20em;
 	border-left: .3em solid var(--color-steelblue);
 }
-/*/////////// education //////////////*/
-#resume-experience-year-1{grid-area: resume-experience-year-1;}
-#resume-experience-info-1{grid-area: resume-experience-info-1;}
-#resume-experience-year-2{grid-area: resume-experience-year-2;}
-#resume-experience-info-2{grid-area: resume-experience-info-2;}
-#resume-experience-year-3{grid-area: resume-experience-year-3;}
-#resume-experience-info-3{grid-area: resume-experience-info-3;}
-#resume-experience-year-4{grid-area: resume-experience-year-4;}
-#resume-experience-info-4{grid-area: resume-experience-info-4;}
-#resume-experience-year-5{grid-area: resume-experience-year-5;}
-#resume-experience-info-5{grid-area: resume-experience-info-5;}
-#resume-experience-year-6{grid-area: resume-experience-year-6;}
-#resume-experience-info-6{grid-area: resume-experience-info-6;}
-#resume-experience-year-7{grid-area: resume-experience-year-7;}
-#resume-experience-info-7{grid-area: resume-experience-info-7;}
-#resume-experience-year-8{grid-area: resume-experience-year-8;}
-#resume-experience-info-8{grid-area: resume-experience-info-8;}
-#resume-experience-year-9{grid-area: resume-experience-year-9;}
-#resume-experience-info-9{grid-area: resume-experience-info-9;}
+
+/*/////////// experience //////////////*/
 .resume-experience-info {
-	margin: 0 0 .5em 0;
-	transition: all ease-in-out 0.5s;
-}
-#resume-experiencetext {
-	display: grid;
-	width: 100%;
-	box-sizing: border-box;
-	grid-auto-rows: minmax(min-content, max-content);
-	grid-template-columns: 1fr 5fr;
-	grid-template-areas: 
-		"resume-experience-year-1 resume-experience-info-1"
-		"resume-experience-year-2 resume-experience-info-2"
-		"resume-experience-year-3 resume-experience-info-3"
-		"resume-experience-year-4 resume-experience-info-4"
-		"resume-experience-year-5 resume-experience-info-5"
-		"resume-experience-year-6 resume-experience-info-6"
-		"resume-experience-year-7 resume-experience-info-7"
-		"resume-experience-year-8 resume-experience-info-8"
-		"resume-experience-year-9 resume-experience-info-9";
+	margin: 0 0 1em 0;
 }
 .resume-experience-story {
 	display: none;
 	opacity: 0;
+	padding-top: .5em;
 }
 .resume-experience-story-show {
 	opacity: 1;
@@ -344,29 +307,6 @@ nav {
 }
 #resume-experience {
 	grid-area: resume-experience;
-}
-/*//////////// additional info ///////////*/
-#resume-additional {
-	grid-area: resume-additional;
-}
-/*/////////// resume grid layout /////////*/
-#resume-container {
-	width: 100%;
-	max-width: 60em;
-	box-sizing: border-box;
-	padding: 0 .5em 0 .5em;
-	margin: auto;
-	display: grid;
-	grid-template-rows: auto auto auto auto auto auto 3em;
-	grid-template-columns: 2fr 1fr ;
-	grid-template-areas:
-		"resume-header resume-downloadbtn"
-		"resume-intro resume-intro"
-		"resume-education resume-education"
-		"resume-languages resume-languages"
-		"resume-experience resume-experience"
-		"resume-additional resume-additional"
-		". .";
 }
 
 
