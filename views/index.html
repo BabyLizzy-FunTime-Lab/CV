@@ -14,12 +14,12 @@
 </head>
 <body>
 	<nav>
-		<a class="navitem navitem-logo" href="">Logo José Rasmussen</a>
-		<a class="navitem navitem-1" href="">About</a>
-		<a class="navitem navitem-2" href="">Resume</a>
-		<a class="navitem navitem-3" href="">Projects</a>
-		<a class="navitem navitem-4" href="">Gallery</a>
-		<a class="navitem navitem-5" href="">Contact</a>
+		<a class="navitem" id="navitem-logo" href="">Rasmussen</a>
+		<a class="navitem" id="navitem-1" href="">About</a>
+		<a class="navitem" id="navitem-2" href="">Resume</a>
+		<a class="navitem" id="navitem-3" href="">Projects</a>
+		<a class="navitem" id="navitem-4" href="">Gallery</a>
+		<a class="navitem" id="navitem-5" href="">Contact</a>
 	</nav>
 	<header id="banner-container" name="banner">
 		<div id="banner-message">
@@ -28,28 +28,30 @@
 			<p>Web Developer</p>
 		</div>
 	</header>
-	<article id="about-container"name="introduction">
-		<header id="about-header">
-			<h2>About, who I am.</h2>			
-		</header>
-		<section id="about-text">
-			<p>
-				Hi, I'm José. Welcome to my little corner of the internet.
-				Let me tell you a bit about myself.
-			</p>
-			<p>
-				While studying at the Rotterdam University of Applied Sciences I realized that my true passion layed in programming. I changed my life goals and now I'm an entry level web developer looking for an opportunity in IT.
-			</p>
-			<p>
-				I was born in Peru, raised on Aruba and educated in the Netherlands. Because of this I have developed a broad world view and have experience in dealing with people from many nationalities. Working in multicultural groups is something I quite enjoy.
-			</p>
-			<p>
-				My two daughters are my inspiration and my wife is my rock. Part of the reason that I want a carear in IT is so that I can provide them with a comftrable life and stability. I'm all in. 
-			</p>
-		</section>
-		<img id="about-image" src="../image/mugshot.jpg">
+	<article class="main-container" id="about-container" name="introduction">
+		<div id="about-frame">
+			<header id="about-header">
+				<h2>About, who I am.</h2>			
+			</header>
+			<section id="about-text">
+				<p>
+					Hi, I'm José. Welcome to my little corner of the internet.
+					Let me tell you a bit about myself.
+				</p>
+				<p>
+					While studying at the Rotterdam University of Applied Sciences I realized that my true passion layed in programming. I changed my life goals and now I'm an entry level web developer looking for an opportunity in IT.
+				</p>
+				<p>
+					I was born in Peru, raised on Aruba and educated in the Netherlands. Because of this I have developed a broad world view and have experience in dealing with people from many nationalities. Working in multicultural groups is something I quite enjoy.
+				</p>
+				<p>
+					My two daughters are my inspiration and my wife is my rock. Part of the reason that I want a carear in IT is so that I can provide them with a comftrable life and stability. I'm all in. 
+				</p>
+			</section>
+			<img id="about-image" src="../image/mugshot.jpg">
+		</div>
 	</article>
-	<article id="resume-container" name="resume">
+	<article class="main-container" id="resume-container" name="resume">
 		<header id="resume-header">
 			<h2 id="resume-header-title">My Resume</h2>
 			<button id="resume-downloadbtn">Download PDF</button>
@@ -285,7 +287,7 @@
 			</div>
 		</section>
 	</article>
-	<article id="projects-container" name="projects">
+	<article class="main-container" id="projects-container" name="projects">
 		<header id="projects-header">
 			<h2>My Projects</h2>
 		</header>
@@ -347,7 +349,7 @@
 			</div>
 		</section>
 	</article>
-	<article id="gallery-container" name="gallery">
+	<article class="main-container" id="gallery-container" name="gallery">
 		<header id="gallery-header">
 			<h2>Gallery</h2>
 		</header>

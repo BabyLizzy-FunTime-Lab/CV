@@ -5,7 +5,7 @@
 	--font-headers: 'Orbitron';
 	--font-text: 'Roboto';
 	--fontweight-bold: 900;
-	/*kleuren*/
+	/*colors*/
 	--color-snow: rgb(255, 250, 250);
 	--color-whitesmoke: rgb(245,245,245);
 	--color-steelblue: rgb(70,130,180);
@@ -21,6 +21,8 @@
 	--color-gitaar-border: rgb(0,0,0);
 	--color-moviebuff-border: rgb(153, 0, 0);
 	--color-ninjarun-border: rgb(102, 0, 102);
+	/*images*/
+	--img-logo-background: url(../image/lizzy_art_square.jpg);
 }
 body {
 	background-color: var(--color-whitesmoke);
@@ -40,23 +42,37 @@ body {
 	color: var(--color-whitesmoke);
 	transition: all ease-in-out 0.5s;
 }
-.navitem-logo {
+#navitem-logo {
 	grid-area: logo;
 	justify-self: stretch;
+	height: 100%;
+	color: var(--color-snow);
+	text-shadow: 0 4px 4px var(--color-black);
+	font-size: 1.8em;
+	padding: 0 .5em 0 .5em;
+	background-image: var(--img-logo-background);
+	background-size: cover;
+	background-position: center;
+
+	clip-path: polygon(.2em 0%, 100% 0%, calc(100% - .2em) 100%, 0% 100%);
 }
-.navitem-1 {
+#navitem-logo:hover {
+	transition: transform 1s;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+#navitem-1 {
 	grid-area: intro;
 }
-.navitem-2 {
+#navitem-2 {
 	grid-area: resume;
 }
-.navitem-3 {
+#navitem-3 {
 	grid-area: projects;
 }
-.navitem-4 {
+#navitem-4 {
 	grid-area: gallery;
 }
-.navitem-5 {
+#navitem-5 {
 	grid-area: contact;
 }
 nav {
@@ -78,7 +94,7 @@ nav {
 		.navitem {
 			font-size: .8em;
 		}
-		.navitem-logo {
+		#navitem-logo {
 			place-self: center center;
 			font-size: 1em;
 		}
@@ -146,8 +162,40 @@ nav {
 	width: 100%;
 	object-fit: cover;
 }
-
+@media only screen and (min-width: 720px) {
+	#banner-container {
+		height: calc(100vh - 3em);
+	}
+}
+@media only screen and (orientation: landscape) and (max-width: 914px) {
+	#banner-image {
+		height: calc(100vh - 11em);
+	}
+}
+/*//////////// all main-containers ////////////*/
+.main-container {
+	padding: 3em .5em 3em .5em;
+	box-sizing: border-box;
+}
 /*//////////////// about ///////////////*/
+#about-container {
+	width: 100%;
+	max-width: 50em;
+	min-height: calc(100vh - 3em);
+	margin: auto;
+	display: flex;
+	align-items: center;
+  	justify-content: center;
+}
+#about-frame {
+	display: grid;
+	grid-template-rows: auto auto auto;
+	grid-template-columns: auto;
+	grid-template-areas: 
+		"about-header"
+		"about-text"
+		"about-image";
+}
 #about-header {
 	grid-area: about-header;
 	font-family: var(--font-headers), sans-serif;
@@ -157,8 +205,8 @@ nav {
 	box-sizing: border-box;
 	place-self: center center;
 	text-align: center;
-	max-width: 30em;
-	width: 90%;
+	max-width: 40em;
+	width: 100%;
 }
 #about-image {
 	grid-area: about-image;
@@ -176,23 +224,9 @@ nav {
 	max-width: 30em;
 	width: 90%;
 }
-#about-container {
-	/*min-height: calc(100vh - 3.5em);*/
-	width: 100%;
-	max-width: 60em;
-	margin: 1.5em auto 3em auto;
-	display: grid;
-	/*grid-template-rows: 3em calc(100vh - 9.5em) 3em;*/
-	grid-template-rows: auto auto auto;
-	/*grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content);*/
-	grid-template-columns: auto;
-	grid-template-areas: 
-		"about-header"
-		"about-text"
-		"about-image";
-}
+
 @media only screen and (orientation: landscape) {
-	#about-container {
+	#about-frame {
 		grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content);
 		grid-template-columns: 2fr 1fr;
 		grid-template-areas: 
@@ -208,8 +242,8 @@ nav {
 #resume-container {
 	width: 100%;
 	max-width: 60em;
-	box-sizing: border-box;
-	padding: 0 .5em 0 .5em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
 	margin: auto;
 }
 #resume-header, .resume-sectionheader, #resume-downloadbtn {
@@ -238,6 +272,9 @@ nav {
 .resume-section {
 	padding: 2em .5em 2em .5em;
 	box-sizing: border-box;
+	width: 100%;
+	max-width: 50em;
+	margin: auto;
 }
 .resume-sectionheader h3, h4 {
 	margin: 0;
@@ -310,7 +347,6 @@ nav {
 }
 
 
-
 /*////////////// My Projects ////////////////*/
 #projects-header, .projects-sectionheader {
 	font-family: var(--font-headers), sans-serif;
@@ -350,13 +386,12 @@ nav {
 	width: 100%;
 	max-width: 60em;
 	margin: auto;
-	padding: 0 .5em 0 .5em;
-	box-sizing: border-box;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
 	display: grid;
-	grid-template-rows: 3em auto auto auto auto auto 3em;
+	grid-template-rows: auto auto auto auto auto 3em;
 	grid-template-columns: auto;
 	grid-template-areas:
-		"."
 		"projects-header"
 		"projects-introtext"
 		"projects-gitaar"
@@ -377,6 +412,11 @@ nav {
 	clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 10% 50%);
 	width: 100%;
 	height: 100%;
+	transition: transform .2s;
+}
+.projects-image:hover {
+	transform: scale(1.1);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 .projects-link {
 	grid-area: projects-link;
@@ -384,6 +424,7 @@ nav {
 	place-self: center;
 	height: 3.7em;		
 	width: 100%;
+	overflow: hidden;
 }
 #projects-gitaar-image {
 	object-position: bottom;
@@ -415,6 +456,9 @@ nav {
 		"projects-text projects-text";
 }
 @media only screen and (min-width: 500px) {
+	#resume-header-title {
+		text-align: center;
+	}
 	.projects-section {
 		grid-template-areas:
 		"projects-sectionheader projects-link"
@@ -510,12 +554,12 @@ figcaption {
 	width: 100%;
 	max-width: 60em;
 	margin: 0 auto 4em auto;
-	padding: 0 .5em 0 .5em;
-	box-sizing: border-box;	
+	padding-left: 0.5em;
+	padding-right: 0.5em;
 }
 #gallery-frame {
 	width: 100%;
-	max-width: 50em;
+	max-width: 35em;
 	margin: auto;
 	display: grid;
 	grid-template-rows: repeat(4, minmax(1fr, 1fr));
@@ -543,6 +587,16 @@ figcaption {
 	max-width: 80em;
 	height: 100%;
 	max-width: 80em;
+}
+@media only screen And (min-width: 914px) {
+	#gallery-frame {
+		max-width: 50em;
+		grid-template-rows: repeat(2, minmax(1fr, 1fr));
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas: 
+			"image-1 image-2 image-3 image-4"
+			"image-5 image-6 image-7 image-8";
+	}
 }
 /*/////////// footer /////////////*/
 #footer-header {
