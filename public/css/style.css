@@ -252,13 +252,15 @@ nav {
 #resume-header-title {
 	grid-area: resume-header-title;
 }
+#resume-download-link {
+	grid-area: resume-downloadbtn;	
+	place-self: center;	
+}
 #resume-downloadbtn {
-	grid-area: resume-downloadbtn;
 	min-width: fit-content;
-	width: 70%;
 	min-height: fit-content;
-	height: 60%;
-	place-self: center;
+	padding: .3em .5em .3em .5em;
+	box-sizing: border-box;
 }
 #resume-header {
 	background-color: var(--color-steelblue);
@@ -338,6 +340,7 @@ nav {
 .showmore-btn {
 	font-size: .8em;
 	color: var(--color-steelblue);
+	background-color: var(--color-whitesmoke);
 	margin: 0;
 	border: transparent;
 	padding: 0;

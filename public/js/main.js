@@ -28,9 +28,9 @@ function elementID(id) {
 					thisElement.nextElementSibling.className = "resume-experience-story-show";
 				}, 50)
 			} else {
-				elementID(clickedExperienceID).children[2].style.display = "initial";
-				elementID(clickedExperienceID).children[3].style.display = "none";
-				elementID(clickedExperienceID).children[3].className = "resume-experience-story";
+				elementID(clickedExperienceID).children[3].style.display = "initial";
+				elementID(clickedExperienceID).children[4].style.display = "none";
+				elementID(clickedExperienceID).children[4].className = "resume-experience-story";
 				this.nextElementSibling.style.display = "initial";
 				this.style.display = "none";
 				window.setTimeout(function() {
