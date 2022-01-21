@@ -13,13 +13,13 @@
 	<script src="js/main.js" async></script>
 </head>
 <body>
-	<nav>
-		<a class="navitem" id="navitem-logo" href="">Rasmussen</a>
-		<a class="navitem" id="navitem-1" href="">About</a>
-		<a class="navitem" id="navitem-2" href="">Resume</a>
-		<a class="navitem" id="navitem-3" href="">Projects</a>
-		<a class="navitem" id="navitem-4" href="">Gallery</a>
-		<a class="navitem" id="navitem-5" href="">Contact</a>
+	<nav id="nav-container">
+		<a class="navitem" id="navitem-logo" href="#nav-container">Rasmussen</a>
+		<a class="navitem" id="navitem-1" href="#about-container">About</a>
+		<a class="navitem" id="navitem-2" href="#resume-container">Resume</a>
+		<a class="navitem" id="navitem-3" href="#projects-container">Projects</a>
+		<a class="navitem" id="navitem-4" href="#gallery-container">Gallery</a>
+		<a class="navitem" id="navitem-5" href="#footer-container">Contact</a>
 	</nav>
 	<header id="banner-container" name="banner">
 		<div id="banner-message">
@@ -390,8 +390,8 @@
 			</figure>
 		</section>
 	</article>
-	<footer>
-		<div id="footer-container">
+	<footer id="footer-container">
+		<div id="footer-frame">
 			<header id="footer-header">
 				<h2>Contact</h2>
 			</header>
