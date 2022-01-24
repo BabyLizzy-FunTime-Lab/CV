@@ -153,10 +153,10 @@ nav {
 	color: var(--color-whitesmoke);
 }
 #banner-message h1 {
-	margin: 0 0 .5em 0;
+	margin: 0 0 0 0;
 }
 #banner-message p {
-	margin: .2em .7em 0 0;
+	margin: .2em 0 .2em 0;
 	font-size: 1.2em;
 }
 #banner-image {
@@ -172,7 +172,7 @@ nav {
 }
 @media only screen and (orientation: landscape) and (max-width: 914px) {
 	#banner-image {
-		height: calc(100vh - 11em);
+		height: calc(100vh - 10em);
 	}
 }
 /*//////////// all main-containers ////////////*/
