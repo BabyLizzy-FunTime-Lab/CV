@@ -639,26 +639,23 @@ figcaption {
 	font-size: .7em;
 	margin: 1em 0 1em 0;
 }
-.footer-link {
+.footer-linklogo {
 	object-fit: cover;
 	clip-path: circle(41% at 50% 50%);
+	background-color: var(--color-whitesmoke);
 	height: 5em;
 }
-#footer-linkedin {
-	grid-area: footer-linkedin;
-}
-#footer-linkedin-icon {
-	background-color: var(--color-whitesmoke);
-}
-#footer-github {
-	grid-area: footer-github;
+#footer-linkframe {
+	grid-area: footer-linkframe;
+	display: flex;
 }
 #footer-image {
 	grid-area: footer-image;
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
-  	clip-path: polygon(80% 5%, 0% 80%, 100% 100%);	
+  	clip-path: polygon(80% 5%, 0% 80%, 100% 100%);
+  	background-color: var(--color-whitesmoke);	
 }
 #footer-frame a {
 	text-decoration: none;
@@ -675,7 +672,7 @@ figcaption {
 	grid-template-areas: 
 		". footer-header footer-header footer-image"
 		". footer-info footer-info footer-image"
-		". footer-linkedin footer-github footer-image"
+		". footer-linkframe footer-linkframe footer-image"
 		". footer-copyright footer-copyright footer-image";
 }
 #footer-container {
