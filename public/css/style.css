@@ -24,9 +24,11 @@
 	/*images*/
 	--img-logo-background: url(../image/lizzy_art_square.jpg);
 }
+html {
+	scroll-behavior: smooth;
+}
 body {
 	background-color: var(--color-whitesmoke);
-	scroll-behavior: smooth;
 }
 .navitem {
 	display: flex;
@@ -86,6 +88,7 @@ nav {
 	position: sticky;
 	top: 0;
 	z-index: 1;
+	/*background: linear-gradient(45deg, white, white, white, lightpink, hotpink, midnightblue, mediumslateblue, lightskyblue);*/
 }
 /*Mobiel nav*/
 @media screen
