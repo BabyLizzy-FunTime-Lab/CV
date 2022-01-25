@@ -22,7 +22,7 @@
 	--color-moviebuff-border: rgb(153, 0, 0);
 	--color-ninjarun-border: rgb(102, 0, 102);
 	/*images*/
-	--img-logo-background: url(../image/lizzy_art_square.jpg);
+	--img-logo-background: url(https://res.cloudinary.com/babylizzyevee/image/upload/c_limit,h_400,q_100,x_1406,y_1225/v1643152743/CV-images/lizzy_art_square_sclfqn.jpg);
 }
 html {
 	scroll-behavior: smooth;
