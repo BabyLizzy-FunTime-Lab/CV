@@ -23,6 +23,7 @@
 	--color-ninjarun-border: rgb(102, 0, 102);
 	/*images*/
 	--img-logo-background: url(https://res.cloudinary.com/babylizzyevee/image/upload/c_limit,h_400,q_100,x_1406,y_1225/v1643152743/CV-images/lizzy_art_square_sclfqn.jpg);
+	--img-ninjarun-world: url(https://res.cloudinary.com/babylizzyevee/image/upload/c_scale,h_400,q_100/v1643152739/CV-images/ninjarun_world_ahep2j.jpg);
 }
 html {
 	scroll-behavior: smooth;
@@ -479,7 +480,7 @@ nav {
 		clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 3.7em, 2em 2em, 0 0);
 	}
 	#projects-ninjarun-image {
-		content: url(../image/ninjarun_world.png);
+		content: var(--img-ninjarun-world);
 		object-position: center left;
 	}
 	.projects-link {
