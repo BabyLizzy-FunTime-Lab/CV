@@ -31,10 +31,10 @@ function createURL(search_input, string_or_ID) {
 	let input = search_input.trim();
 	switch(string_or_ID) {
 		case "string": 
-			url = "http://www.omdbapi.com/?apiKey=6c3a2d45&plot=full&type=movie&s=" + input;
+			url = "https://www.omdbapi.com/?apiKey=6c3a2d45&plot=full&type=movie&s=" + input;
 			break;
 		case "ID": 
-			url = "http://www.omdbapi.com/?apiKey=6c3a2d45&plot=full&i=" + input;
+			url = "https://www.omdbapi.com/?apiKey=6c3a2d45&plot=full&i=" + input;
 			break;
 		default:
 			errorHandeler("Failed to create URL");
