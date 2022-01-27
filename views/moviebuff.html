@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>MovieBuff</title>
+	<meta name="description" content="Search movie information">
+	<meta name="keywords" content="movies,information,search">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/moviebuff-style.css">
+	<script src="js/moviebuff-app.js" async></script>
+</head>
+<body>
+	<header id="header--container">
+		<div class="header__logo">
+			<a aria-label="Home link" href="http://localhost:5000/moviebuff"><h1>Movie Buff</h1></a>
+		</div>
+		<div id="error-container">
+			<div id="error-box">
+				<h2 id="error-welcome">Oops! Something went wrong.</h2>
+				<p id="error-message">
+					Test error message: Why this so broken? Fix!
+				</p>
+				<label for="close-err">Close error button</label>
+				<input type="button" name="close-err" id="close-err" value="Ok">
+			</div>
+		</div>
+		<nav id="header__nav">
+			<form id="searchbar--container">
+				<label id="label_search_input" for=search_input>Search Input</label>
+				<input type="text" id="search_input" name="search_input" placeholder="Movie Name" autofocus>
+				<label id="label_search_btn" for="search_btn">Search Button</label>
+				<input type="button" id="search_btn" name="search_btn" value="Search">
+			</form>			
+		</nav>
+	</header>
+	<div id="banner"></div>
+	<main>
+		<article id="featuredmovies">
+			<h2>Featured Movies</h2>
+		</article>
+		<article id="searchresults"></article>
+	</main>
+	<footer>
+		
+	</footer>
+</body>
+</html>

@@ -20,7 +20,9 @@ app.use(express.urlencoded({
 app.get('/', (req, res) => {
 	res.sendFile(__dirname + '/views/index.html');
 });
-
+app.get('/moviebuff', (req, res) => {
+	res.sendFile(__dirname + '/views/moviebuff.html');
+})
 // let server = https.createServer(options, app);
 
 // server.listen.....
