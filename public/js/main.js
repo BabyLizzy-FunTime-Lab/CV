@@ -47,7 +47,7 @@ function elementID(id) {
 	let color_whitesmoke = "rgb(245,245,245)";
 	let color_blackfade = "rgba(0, 0, 0, 0.9)";
 	let color_black = "rgb(0, 0, 0)";
-	let close_background = "url(/image/lizzy_art_square.jpg)";
+	let close_background = "url(https://res.cloudinary.com/babylizzyevee/image/upload/c_limit,h_400,q_100,x_1406,y_1225/v1643152743/CV-images/lizzy_art_square_sclfqn.jpg)";
 	let close_Xshape = "polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%)";
 
 	let imageArray = Array.from(elementClass("gallery-tileimage"));
