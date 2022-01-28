@@ -1,6 +1,7 @@
 archive
 public/audio
 public/video
+public/images
 public/image
 
 # Node build artifacts
