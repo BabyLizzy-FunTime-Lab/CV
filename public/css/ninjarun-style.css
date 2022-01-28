@@ -4,14 +4,7 @@
 }
 body {
 	background-color: var(--kleur-snow);
-	min-width: 835px;
-}
-nav {
-	text-align: center;
-	background-color: olive;
-	padding: .4em 0 .4em 0;
-	height: 3em;
-	width: 100%; 
+	/*min-width: 835px;*/
 }
 nav h3 {
 	margin: 0;
