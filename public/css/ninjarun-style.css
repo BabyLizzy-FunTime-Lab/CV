@@ -4,7 +4,7 @@
 }
 body {
 	background-color: var(--kleur-snow);
-	/*min-width: 835px;*/
+	min-width: 835px;
 }
 nav h3 {
 	margin: 0;
