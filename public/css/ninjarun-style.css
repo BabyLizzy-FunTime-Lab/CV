@@ -6,14 +6,6 @@ body {
 	background-color: var(--kleur-snow);
 	min-width: 835px;
 }
-footer {
-	height: 7em;
-	width: 100%;
-	margin: 2em 0 0 0;
-	text-align: center;
-	background-color: dimgrey;
-	border-top: 1em solid black;
-}
 nav {
 	text-align: center;
 	background-color: olive;
@@ -38,7 +30,7 @@ article {
 	margin: 0 auto 1em auto;
 }
 #main--contentbox {
-	width: 800px;
+	width: 100%;
 	/*max-width: 60em;*/
 	min-height: 100vh;
 	padding: 0 .5em 0 .5em;
@@ -55,13 +47,18 @@ article {
 	margin: .5em auto .5em auto;
 	/*box-sizing: border-box;*/
 	height: 600px;
-	width: 800px;
+	width: 100%;
+	max-width: 800px;
 	/*background-image: url(../Images/Lizzy_Art.jpg);*/
 	background-color: grey;
 	background-position: top center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	align-self: center;
+	box-sizing: border-box;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
 }
 #start_btn {
 	font-family: "Press Start 2P", "sans-serif";

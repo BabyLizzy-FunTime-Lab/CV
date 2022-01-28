@@ -2,67 +2,18 @@
 function elementID(ID) {
 	return document.getElementById(ID);
 }
-// // Colors and backgrounds
-// let color_whitesmoke = "rgb(245,245,245)";
-// let color_blackfade = "rgba(0, 0, 0, 0.9)";
-// let color_black = "rgb(0, 0, 0)";
-// let close_background = "url(https://res.cloudinary.com/babylizzyevee/image/upload/c_limit,h_400,q_100,x_1406,y_1225/v1643152743/CV-images/lizzy_art_square_sclfqn.jpg)";
-// let close_Xshape = "polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%)";
-// // Create Game container
-// let game_background = document.createElement("div");
-// game_background.id = "game--background";
-// game_background.style.position = "fixed";
-// game_background.style.top = "0";
-// game_background.style.zIndex = "2";
-// game_background.style.width = "100vw";
-// game_background.style.height = "100vh";
-// game_background.style.display = "flex";
-// game_background.style.alignItems = "center";
-// game_background.style.justifyContent = "center";
-// game_background.style.backgroundColor = color_blackfade;
-
-// let close_btn = document.createElement("div");
-// close_btn.setAttribute("style", "width:2em;height:2em;margin: .5em auto .5em auto;");
-// close_btn.style.backgroundImage = close_background;
-// close_btn.style.backgroundColor = color_whitesmoke;
-// close_btn.style.clipPath = close_Xshape;
-// close_btn.style.backgroundPosition = "center";
-// close_btn.style.backgroundSize = "cover";
-// close_btn.addEventListener("click", function(event) {
-// 	elementID("game--background").remove();
-// })
-
-// let game_controls = document.createElement("div");
-// game_controls.style.color = color_whitesmoke;
-// game_controls.style.textAlign = "center";
-// game_controls.style.margin = ".4em 0 .4em 0";
-// game_controls.innerText = "To Jump press 'j' or tap screen";
-
-// let game_container = document.createElement("div");
-// game_container.id = "game--container";
-// game_container.style.margin = "auto";
-
-// let start_btn = document.createElement("button");
-// start_btn.id = "start_btn";
-
-// function ninjaGame() {
-// 	game_background.appendChild(close_btn);
-// 	game_background.appendChild(game_controls);
-// 	game_background.appendChild(game_container);
-// 	game_background.appendChild(start_btn);
-// }
 
 // Sprites, Game Backgrounds & Images
 let ninja_sprite = new Image();
-	ninja_sprite.src = "images/nanonauten/geanimeerdeNanonaut.png";
+	ninja_sprite.src = "https://res.cloudinary.com/babylizzyevee/image/upload/v1643385158/CV-images/nanonauten/geanimeerdeNanonaut_lufg6w.png";
 let robot_bad_sprite = new Image();
-	robot_bad_sprite.src = "images/nanonauten/geanimeerdeRobot.png";
+	robot_bad_sprite.src = "https://res.cloudinary.com/babylizzyevee/image/upload/v1643385158/CV-images/nanonauten/geanimeerdeRobot_xtyszl.png";
 let achtergrondAfbeelding = new Image();
-	achtergrondAfbeelding.src = "images/nanonauten/achtergrond.png";
+	achtergrondAfbeelding.src = "https://res.cloudinary.com/babylizzyevee/image/upload/v1643385158/CV-images/nanonauten/achtergrond_wmwjir.png";
 let bosje_1_Afbeelding = new Image();
-	bosje_1_Afbeelding.src = "images/nanonauten/bosje1.png";
+	bosje_1_Afbeelding.src = "https://res.cloudinary.com/babylizzyevee/image/upload/v1643385158/CV-images/nanonauten/bosje1_dg4afd.png";
 let bosje_2_Afbeelding = new Image();
-	bosje_2_Afbeelding.src = "images/nanonauten/bosje2.png";
+	bosje_2_Afbeelding.src = "https://res.cloudinary.com/babylizzyevee/image/upload/v1643385158/CV-images/nanonauten/bosje2_aylaza.png";
 
 // CONSTANTEN
 let SPEEL_SPELMODUS = 0;
@@ -420,6 +371,55 @@ elementID("start_btn").addEventListener("click", function(event) {
 	start();
 })
 
+// // Colors and backgrounds
+// let color_whitesmoke = "rgb(245,245,245)";
+// let color_blackfade = "rgba(0, 0, 0, 0.9)";
+// let color_black = "rgb(0, 0, 0)";
+// let close_background = "url(https://res.cloudinary.com/babylizzyevee/image/upload/c_limit,h_400,q_100,x_1406,y_1225/v1643152743/CV-images/lizzy_art_square_sclfqn.jpg)";
+// let close_Xshape = "polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%)";
+// // Create Game container
+// let game_background = document.createElement("div");
+// game_background.id = "game--background";
+// game_background.style.position = "fixed";
+// game_background.style.top = "0";
+// game_background.style.zIndex = "2";
+// game_background.style.width = "100vw";
+// game_background.style.height = "100vh";
+// game_background.style.display = "flex";
+// game_background.style.alignItems = "center";
+// game_background.style.justifyContent = "center";
+// game_background.style.backgroundColor = color_blackfade;
+
+// let close_btn = document.createElement("div");
+// close_btn.setAttribute("style", "width:2em;height:2em;margin: .5em auto .5em auto;");
+// close_btn.style.backgroundImage = close_background;
+// close_btn.style.backgroundColor = color_whitesmoke;
+// close_btn.style.clipPath = close_Xshape;
+// close_btn.style.backgroundPosition = "center";
+// close_btn.style.backgroundSize = "cover";
+// close_btn.addEventListener("click", function(event) {
+// 	elementID("game--background").remove();
+// })
+
+// let game_controls = document.createElement("div");
+// game_controls.style.color = color_whitesmoke;
+// game_controls.style.textAlign = "center";
+// game_controls.style.margin = ".4em 0 .4em 0";
+// game_controls.innerText = "To Jump press 'j' or tap screen";
+
+// let game_container = document.createElement("div");
+// game_container.id = "game--container";
+// game_container.style.margin = "auto";
+
+// let start_btn = document.createElement("button");
+// start_btn.id = "start_btn";
+
+// function ninjaGame() {
+// 	game_background.appendChild(close_btn);
+// 	game_background.appendChild(game_controls);
+// 	game_background.appendChild(game_container);
+// 	game_background.appendChild(start_btn);
+// }
 // Teken de Nanonaut in viewport, old ninja animation
 	// ctx.drawImage(ninja_sprite, nanonautX - cameraX, nanonautY - cameraY);
 	// let nanonautSpriteSheetRij = Math.floor(nanonautFrameNr/NANONAUT_NR_FRAMES_PER_RIJ);
