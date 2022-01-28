@@ -23,6 +23,9 @@ app.get('/', (req, res) => {
 app.get('/moviebuff', (req, res) => {
 	res.sendFile(__dirname + '/views/moviebuff.html');
 })
+app.get('/ninjarun', (req, res) => {
+	res.sendFile(__dirname + '/views/ninjarun.html');
+})
 // let server = https.createServer(options, app);
 
 // server.listen.....
