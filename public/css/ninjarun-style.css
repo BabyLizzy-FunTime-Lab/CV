@@ -1,33 +1,49 @@
-::root {
-	--kleur-snow: rgb(255,250,250);
-	/*--background-gamewin: url(../Images/Lizzy_Art.jpg);*/
+:root {
+	/*font*/
+	--font-header: "Press Start 2P", "sans-serif";
+	--font-h2: "Orbitron", "sans-serif";
+	--font-text: "Tomorrow", "sans-serif";
+	/*color*/
+	--color-whitesmoke: rgb(245,245,245);
+	--color-steelblue: rgb(70,130,180);
+	--color-black: rgb(0,0,0);
 }
-body {
-	background-color: var(--kleur-snow);
+
+html, body {
+	background-color: var(--color-whitesmoke);
 	min-width: 835px;
-}
-nav h3 {
-	margin: 0;
 }
 #pageheader {
 	text-align: center;
-	width: 800px;
-	/*max-width: 60em;*/
-	margin: 0 auto 1em auto;
-	font-family: "Press Start 2P", "sans-serif";
+	width: 100%;
+	margin: 0 0 2em 0;
+	font-family: var(--font-header);
+	background-color: var(--color-steelblue);
+	color: var(--color-whitesmoke);
+	height: 5em;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+h1 {
+	margin: 0;
+	font-size: 3em;
 }
 h2 {
-	font-family: "Orbitron", "sans-serif";
+	font-family: var(--font-h2);
+	font-size: 3em;
+	margin: 1em auto .5em auto;
 }
-article {
+p {
 	margin: 0 auto 1em auto;
+	font-family: var(--font-text);
+	font-size: 2em;
 }
 #main--contentbox {
 	width: 100%;
-	/*max-width: 60em;*/
 	min-height: 100vh;
 	padding: 0 .5em 0 .5em;
-	margin: auto;
+	margin: 0 auto 3em auto;
 	box-sizing: border-box;
 }
 #game--article {
@@ -38,12 +54,10 @@ article {
 #game--container {
 	padding: 1em 1em 1em 1em;
 	margin: .5em auto .5em auto;
-	/*box-sizing: border-box;*/
 	height: 600px;
 	width: 100%;
 	max-width: 800px;
-	/*background-image: url(../Images/Lizzy_Art.jpg);*/
-	background-color: grey;
+	background-color: var(--color-black);
 	background-position: top center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -54,13 +68,12 @@ article {
 	justify-content: center;
 }
 #start_btn {
-	font-family: "Press Start 2P", "sans-serif";
+	font-family: var(--font-header);
 	padding: .4em;
 	align-self: center;
 }
 #game__canvas {
-	/*background-color: lightblue;*/
-	border: solid 2px blue;
+	border: solid 2px var(--color-whitesmoke);
 	image-rendering: -moz-crisp-edges;
   	image-rendering: -webkit-crisp-edges;
   	image-rendering: pixelated;
