@@ -13,8 +13,8 @@ function elementID(id) {
 	return document.getElementById(id);
 }
 
-//Experience section text reveal function
-(function showExperience() {
+//Experience & education sections text reveal function
+(function showStory() {
 	let classArray = Array.from(elementClass("showmore-btn"));
 
 	classArray.forEach(function(element) {
@@ -25,16 +25,16 @@ function elementID(id) {
 				this.nextElementSibling.style.display = "initial";
 				this.style.display = "none";
 				window.setTimeout(function() {
-					thisElement.nextElementSibling.className = "resume-experience-story-show";
+					thisElement.nextElementSibling.className = "resume-story-show";
 				}, 50)
 			} else {
 				elementID(clickedExperienceID).children[3].style.display = "initial";
 				elementID(clickedExperienceID).children[4].style.display = "none";
-				elementID(clickedExperienceID).children[4].className = "resume-experience-story";
+				elementID(clickedExperienceID).children[4].className = "resume-story";
 				this.nextElementSibling.style.display = "initial";
 				this.style.display = "none";
 				window.setTimeout(function() {
-					thisElement.nextElementSibling.className = "resume-experience-story-show";
+					thisElement.nextElementSibling.className = "resume-story-show";
 				}, 50)
 				clickedExperienceID = this.parentElement.id;
 			}
