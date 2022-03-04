@@ -49,10 +49,15 @@ function elementID(id) {
 	let color_black = "rgb(0, 0, 0)";
 	let close_background = "url(https://res.cloudinary.com/babylizzyevee/image/upload/c_limit,h_400,q_100,x_1406,y_1225/v1643152743/CV-images/lizzy_art_square_sclfqn.jpg)";
 	let close_Xshape = "polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%)";
+	let next_shape = "polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%)";
+	let previous_shape = "polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%)";
+	let current_image;
 
 	let imageArray = Array.from(elementClass("gallery-tileimage"));
 
-	imageArray.forEach(function(image) {
+	imageArray.forEach(function(image, index) {
+		let current_image = index;
+
 		image.addEventListener("click", function(event) {
 			let imagesource = this.src;
 			let imageText = this.nextElementSibling.innerText;
@@ -87,8 +92,52 @@ function elementID(id) {
 				elementID("imageViewer").remove();
 			})
 
+			let next = document.createElement("div");
+			next.setAttribute("style", "width:2em;height:2em;margin: .5em auto .5em auto;");
+			next.style.backgroundImage = close_background;
+			next.style.backgroundColor = color_whitesmoke;
+			next.style.clipPath = next_shape;
+			next.style.backgroundPosition = "center";
+			next.style.backgroundSize = "cover";
+			next.addEventListener("click", function(event) {
+				if (imageArray[current_image + 1]) {
+					imagesource = imageArray[current_image + 1].src;
+					imageText = imageArray[current_image + 1].nextElementSibling.innerText;
+					current_image++;
+					elementID("viewerImage").setAttribute("src", imagesource);
+					elementID("viewerCaption").innerText = imageText;
+				} else {
+					return
+				}
+			})
+
+			let previous = document.createElement("div");
+			previous.setAttribute("style", "width:2em;height:2em;margin: .5em auto .5em auto;");
+			previous.style.backgroundImage = close_background;
+			previous.style.backgroundColor = color_whitesmoke;
+			previous.style.clipPath = previous_shape;
+			previous.style.backgroundPosition = "center";
+			previous.style.backgroundSize = "cover";
+			previous.addEventListener("click", function(event) {
+				if (imageArray[current_image - 1]) {
+					imagesource = imageArray[current_image - 1].src;
+					imageText = imageArray[current_image - 1].nextElementSibling.innerText;
+					current_image--;
+					elementID("viewerImage").setAttribute("src", imagesource);
+					elementID("viewerCaption").innerText = imageText;
+				} else {
+					return
+				}
+			})
+
+			let controls_container = document.createElement("div");
+			controls_container.setAttribute("style", "display:flex;justify-content:space-around;");
+			controls_container.append(previous, close, next);
+
+
 			let image = document.createElement("img");
 			image.setAttribute("src", imagesource);
+			image.setAttribute("id", "viewerImage");
 			function landscapeMobile(size) {
 				if(size.matches) {
 					image.setAttribute("style", "width:100%;height:100%;max-height:15em;object-position:center;object-fit:contain;");
@@ -101,12 +150,13 @@ function elementID(id) {
 			landscape_Size.addListener(landscapeMobile);
 			
 			let caption = document.createElement("figcaption");
+			caption.setAttribute("id", "viewerCaption");
 			caption.style.color = color_whitesmoke;
 			caption.style.textAlign = "center";
 			caption.style.margin = ".4em 0 .4em 0";
 			caption.innerText = imageText;
 
-			figure.appendChild(close);
+			figure.appendChild(controls_container);
 			figure.appendChild(image);
 			figure.appendChild(caption);
 			viewerContainer.appendChild(figure);
