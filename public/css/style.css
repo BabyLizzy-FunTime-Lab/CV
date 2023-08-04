@@ -61,7 +61,7 @@ a {
 	padding: 0 .5em 0 .5em;
 	background-image: var(--img-logo-background);
 	background-size: cover;
-	background-position: center;
+	background-position: bottom;
 
 	clip-path: polygon(.2em 0%, 100% 0%, calc(100% - .2em) 100%, 0% 100%);
 }
