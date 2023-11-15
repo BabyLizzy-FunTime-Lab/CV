@@ -414,19 +414,15 @@ nav {
 #projects-container {
 	width: 100%;
 	max-width: 60em;
-	/*margin: auto;*/
-	/*padding-left: 0.5em;*/
-	/*padding-right: 0.5em;*/
 	display: grid;
-	grid-template-rows: auto auto auto auto auto 3em;
+	grid-template-rows: auto auto repeat(3, 1fr);
 	grid-template-columns: auto;
 	grid-template-areas:
 		"projects-header"
 		"projects-introtext"
 		"projects-gitaar"
 		"projects-moviebuff"
-		"projects-ninjarun"
-		".";
+		"projects-ninjarun";
 }
 .projects-sectionheader {
 	grid-area: projects-sectionheader;
@@ -478,7 +474,7 @@ nav {
 	box-sizing: border-box;
 	overflow: hidden;
 	display: grid;
-	grid-template-rows: 3.7em, minmax(min-content, max-content);
+	grid-template-rows: 3.7em auto;
 	grid-template-columns: 1fr 1fr;
 	grid-template-areas:
 		"projects-sectionheader projects-link"

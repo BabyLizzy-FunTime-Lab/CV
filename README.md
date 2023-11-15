@@ -18,7 +18,7 @@ These are some of the cool things I've done.
 
 - Node.js
 - Pure HTML, CSS & Javascript
-- Mobile responsive
+- Mobile responsiveness
 - Hosted on Heroku
 - Cloudinairy used as media source.
 - Version controlled on GItHub
