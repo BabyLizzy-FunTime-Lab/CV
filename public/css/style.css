@@ -16,12 +16,13 @@
 	--color-gainsboro: rgb(220,220,220);
 	--color-lightblack: hsl(0, 0%, 15%);
 	--color-lightgrey: rgb(112, 112, 110);
-	--color-black: rgb(0,0,0);
 	--color-imageview-container: rgb(0,0,0,0.8);
 	--color-project-sectionheader: rgba(0, 0, 0, 0.2);
 	--color-gitaar-border: rgb(0,0,0);
 	--color-moviebuff-border: rgb(153, 0, 0);
 	--color-ninjarun-border: rgb(102, 0, 102);
+	--color-cine-border: rgb(7, 116, 184);
+	--color-real-estate-care-border: rgb(7, 184, 166);
 	/*images*/
 	--img-logo-background: url(https://res.cloudinary.com/babylizzyevee/image/upload/c_limit,h_400,q_100,x_1406,y_1225/v1643152743/CV-images/lizzy_art_square_sclfqn.jpg);
 	--img-ninjarun-world: url(https://res.cloudinary.com/babylizzyevee/image/upload/c_scale,h_400,q_100/v1643152739/CV-images/ninjarun_world_ahep2j.jpg);
@@ -97,12 +98,30 @@ nav {
 	z-index: 1;
 	/*background: linear-gradient(45deg, white, white, white, lightpink, hotpink, midnightblue, mediumslateblue, lightskyblue);*/
 }
+@media screen
+and (max-width: 914px)
+and (-webkit-min-device-pixel-ratio:  1) {
+	.navitem {
+		font-size: .8em;
+	}
+	#navitem-logo {
+		place-self: center center;
+		font-size: 1em;
+	}
+	nav {
+		grid-template-columns: .8fr .8fr 1fr 1fr 1fr;
+		grid-template-rows: 1.5em 2.5em;
+		grid-template-areas:
+				"logo logo logo logo logo"
+				"intro resume projects gallery contact";
+	}
+}
 /*Mobiel nav*/
 @media screen
 	and (max-width: 914px)
 	and (-webkit-min-device-pixel-ratio:  2) {
 		.navitem {
-			font-size: .8em;
+			font-size: .9em;
 		}
 		#navitem-logo {
 			place-self: center center;
@@ -116,6 +135,13 @@ nav {
 				"intro resume projects gallery contact";
 		}
 	}
+@media screen
+and (max-width: 914px)
+and (-webkit-min-device-pixel-ratio:  3) {
+	.navitem {
+		font-size: .65em;
+	}
+}
 /*Laptop nav*/
 @media screen
   	and (min-device-width: 1200px)
@@ -379,7 +405,14 @@ nav {
 #projects-header, .projects-sectionheader {
 	font-family: var(--font-headers), sans-serif;
 }
-
+.projects-sectionheader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.projects-sectionheader h3 {
+	margin: 0 .5em 0 .5em;
+}
 #projects-introtext, .projects-text {
 	font-family: var(--font-text), sans-serif;
 }
@@ -407,6 +440,14 @@ nav {
 	grid-area: projects-moviebuff;
 	border-color: var(--color-moviebuff-border);
 }
+#projects-cine {
+	grid-area: projects-cine;
+	border-color: var(--color-cine-border);
+}
+#projects-real-estate-care {
+	grid-area: projects-real-estate-care;
+	border-color: var(--color-real-estate-care-border);
+}
 #projects-ninjarun {
 	grid-area: projects-ninjarun;
 	border-color: var(--color-ninjarun-border);
@@ -415,13 +456,15 @@ nav {
 	width: 100%;
 	max-width: 60em;
 	display: grid;
-	grid-template-rows: auto auto repeat(3, 1fr);
-	grid-template-columns: auto;
+	grid-template-rows: auto auto repeat(5, 1fr);
+	grid-template-columns: 1fr;
 	grid-template-areas:
 		"projects-header"
 		"projects-introtext"
 		"projects-gitaar"
 		"projects-moviebuff"
+		"projects-cine"
+		"projects-real-estate-care"
 		"projects-ninjarun";
 }
 .projects-sectionheader {

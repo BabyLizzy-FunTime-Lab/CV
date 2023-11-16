@@ -4,6 +4,10 @@
 
 These are some of the cool things I've done.
 
+## Start local server
+```
+node index.js
+```
 
 ### Content
 
