@@ -23,6 +23,7 @@
 	--color-ninjarun-border: rgb(102, 0, 102);
 	--color-cine-border: rgb(7, 116, 184);
 	--color-real-estate-care-border: rgb(7, 184, 166);
+    --color-leden-administratie-border: rgb(30,144,255);
 	/*images*/
 	--img-logo-background: url(https://res.cloudinary.com/babylizzyevee/image/upload/c_limit,h_400,q_100,x_1406,y_1225/v1643152743/CV-images/lizzy_art_square_sclfqn.jpg);
 	--img-ninjarun-world: url(https://res.cloudinary.com/babylizzyevee/image/upload/c_scale,h_400,q_100/v1643152739/CV-images/ninjarun_world_ahep2j.jpg);
@@ -452,6 +453,10 @@ and (-webkit-min-device-pixel-ratio:  3) {
 	grid-area: projects-ninjarun;
 	border-color: var(--color-ninjarun-border);
 }
+#projects-leden-administratie {
+    grid-area: projects-leden-administratie;
+    border-color: var(--color-leden-administratie-border);
+}
 #projects-container {
 	width: 100%;
 	max-width: 60em;
@@ -465,7 +470,9 @@ and (-webkit-min-device-pixel-ratio:  3) {
 		"projects-moviebuff"
 		"projects-cine"
 		"projects-real-estate-care"
-		"projects-ninjarun";
+        "projects-leden-administratie"
+		"projects-ninjarun"
+    ;
 }
 .projects-sectionheader {
 	grid-area: projects-sectionheader;
