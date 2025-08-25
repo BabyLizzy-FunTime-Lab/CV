@@ -97,7 +97,6 @@ nav {
 	position: sticky;
 	top: 0;
 	z-index: 1;
-	/*background: linear-gradient(45deg, white, white, white, lightpink, hotpink, midnightblue, mediumslateblue, lightskyblue);*/
 }
 @media screen
 and (max-width: 914px)
@@ -605,17 +604,16 @@ and (-webkit-min-device-pixel-ratio:  3) {
 	transform: scale(1.1);
 }
 .gallery-tiletext {
-	display: hidden;
 	height: 0;
 }
 figcaption {
-	font-family: var(--font-text);
+    font-family: var(--font-text), serif;
 }
 #gallery-frame {
 	grid-area: gallery-frame;
 }
 #gallery-header {
-	font-family: var(--font-headers);, sans-serif;
+    font-family: var(--font-headers), serif;
 	background-color: var(--color-steelblue);
 	margin: 0 0 .5em 0;
 	padding: 1em .5em 1em .5em;
@@ -628,7 +626,6 @@ figcaption {
 #gallery-container {
 	width: 100%;
 	max-width: 60em;
-	/*margin: 0 auto 4em auto;*/
 	padding-left: 0.5em;
 	padding-right: 0.5em;
 }
@@ -661,7 +658,6 @@ figcaption {
 	width: 100%;
 	max-width: 80em;
 	height: 100%;
-	max-width: 80em;
 }
 @media only screen And (min-width: 914px) {
 	#gallery-frame {
@@ -676,7 +672,7 @@ figcaption {
 /*/////////// footer /////////////*/
 #footer-header {
 	grid-area: footer-header;
-	font-family: var(--font-headers);, sans-serif;
+    font-family: var(--font-headers), serif;
 	color: var(--color-gainsboro);
 }
 #footer-header h2 {
@@ -685,7 +681,7 @@ figcaption {
 }
 #footer-info {
 	grid-area: footer-info;
-	font-family: var(--font-text);
+    font-family: var(--font-text), serif;
 	text-decoration: none;
 	font-style: normal;
 
@@ -700,7 +696,7 @@ figcaption {
 }
 #footer-copyright {
 	grid-area: footer-copyright;
-	font-family: var(--font-text);
+    font-family: var(--font-text), serif;
 	color: var(--color-whitesmoke);
 	text-align: center;
 	font-size: .7em;
