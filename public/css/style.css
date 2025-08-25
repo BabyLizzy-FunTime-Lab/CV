@@ -23,6 +23,7 @@
 	--color-ninjarun-border: rgb(102, 0, 102);
 	--color-cine-border: rgb(7, 116, 184);
 	--color-real-estate-care-border: rgb(7, 184, 166);
+    --color-leden-administratie-border: rgb(30,144,255);
 	/*images*/
 	--img-logo-background: url(https://res.cloudinary.com/babylizzyevee/image/upload/c_limit,h_400,q_100,x_1406,y_1225/v1643152743/CV-images/lizzy_art_square_sclfqn.jpg);
 	--img-ninjarun-world: url(https://res.cloudinary.com/babylizzyevee/image/upload/c_scale,h_400,q_100/v1643152739/CV-images/ninjarun_world_ahep2j.jpg);
@@ -96,7 +97,6 @@ nav {
 	position: sticky;
 	top: 0;
 	z-index: 1;
-	/*background: linear-gradient(45deg, white, white, white, lightpink, hotpink, midnightblue, mediumslateblue, lightskyblue);*/
 }
 @media screen
 and (max-width: 914px)
@@ -452,6 +452,10 @@ and (-webkit-min-device-pixel-ratio:  3) {
 	grid-area: projects-ninjarun;
 	border-color: var(--color-ninjarun-border);
 }
+#projects-leden-administratie {
+    grid-area: projects-leden-administratie;
+    border-color: var(--color-leden-administratie-border);
+}
 #projects-container {
 	width: 100%;
 	max-width: 60em;
@@ -465,7 +469,9 @@ and (-webkit-min-device-pixel-ratio:  3) {
 		"projects-moviebuff"
 		"projects-cine"
 		"projects-real-estate-care"
-		"projects-ninjarun";
+        "projects-leden-administratie"
+		"projects-ninjarun"
+    ;
 }
 .projects-sectionheader {
 	grid-area: projects-sectionheader;
@@ -598,17 +604,16 @@ and (-webkit-min-device-pixel-ratio:  3) {
 	transform: scale(1.1);
 }
 .gallery-tiletext {
-	display: hidden;
 	height: 0;
 }
 figcaption {
-	font-family: var(--font-text);
+    font-family: var(--font-text), serif;
 }
 #gallery-frame {
 	grid-area: gallery-frame;
 }
 #gallery-header {
-	font-family: var(--font-headers);, sans-serif;
+    font-family: var(--font-headers), serif;
 	background-color: var(--color-steelblue);
 	margin: 0 0 .5em 0;
 	padding: 1em .5em 1em .5em;
@@ -621,7 +626,6 @@ figcaption {
 #gallery-container {
 	width: 100%;
 	max-width: 60em;
-	/*margin: 0 auto 4em auto;*/
 	padding-left: 0.5em;
 	padding-right: 0.5em;
 }
@@ -654,7 +658,6 @@ figcaption {
 	width: 100%;
 	max-width: 80em;
 	height: 100%;
-	max-width: 80em;
 }
 @media only screen And (min-width: 914px) {
 	#gallery-frame {
@@ -669,7 +672,7 @@ figcaption {
 /*/////////// footer /////////////*/
 #footer-header {
 	grid-area: footer-header;
-	font-family: var(--font-headers);, sans-serif;
+    font-family: var(--font-headers), serif;
 	color: var(--color-gainsboro);
 }
 #footer-header h2 {
@@ -678,7 +681,7 @@ figcaption {
 }
 #footer-info {
 	grid-area: footer-info;
-	font-family: var(--font-text);
+    font-family: var(--font-text), serif;
 	text-decoration: none;
 	font-style: normal;
 
@@ -693,7 +696,7 @@ figcaption {
 }
 #footer-copyright {
 	grid-area: footer-copyright;
-	font-family: var(--font-text);
+    font-family: var(--font-text), serif;
 	color: var(--color-whitesmoke);
 	text-align: center;
 	font-size: .7em;

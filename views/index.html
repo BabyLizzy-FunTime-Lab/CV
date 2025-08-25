@@ -5,13 +5,14 @@
 	<title>CV Rasmussen</title>
 	<meta name="description" content="CV José Rasmussen">
 	<meta name="keywords" content="CV, José, Rasmussen">
-	<link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/babylizzyevee/image/upload/v1643152947/CV-images/favicon/snorlax_face_a8lxfd.ico">
+	<link rel="icon" type="image/x-icon"
+          href="https://res.cloudinary.com/babylizzyevee/image/upload/v1643152947/CV-images/favicon/snorlax_face_a8lxfd.ico">
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="js/main.js" async></script>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script src="/js/main.js" async></script>
 </head>
 <body id="body">
 	<nav id="nav-container">
@@ -497,12 +498,36 @@
 				</p>
 				<p>
 					The App is made with ionic/vue. State management is done with Pinia and api calls are made
-					with Axios. Media files are stored in <a href="https://cloudinary.com/" target="blank">Cloudinary</a>
-					and text data is accessed via <a href="https://json-real-estate-care-3167f11da290.herokuapp.com/" target="blank">My JSON Server</a>.
+					with Axios. This app is a demo. Uploaded Image files and text data are temporally stored as text on my Heroku
+                    <a href="https://json-real-estate-care-3167f11da290.herokuapp.com/" target="blank">My JSON Server</a>.
 				</p>
 				<p>Please view on mobile for best experience.</p>
 			</div>
 		</section>
+        <section class="projects-section" id="projects-leden-administratie">
+            <header class="projects-sectionheader" id="projects-leden-administratie_header">
+                <a href="https://leden-administratie-rasmussen-7a5d28590210.herokuapp.com/" target="blank">
+                    <h3>Leden Administratie</h3>
+                </a>
+            </header>
+            <a class="projects-link" href="https://leden-administratie-rasmussen-7a5d28590210.herokuapp.com/" target="blank">
+                <img class="projects-image" id="projects-leden-administratie_image"
+                     src="https://res.cloudinary.com/babylizzyevee/image/upload/c_scale,h_400,q_100/v1643152740/CV-images/leden-administratie.jpg"
+                     alt="picture of guitars">
+            </a>
+            <div class="projects-text" id="projects-leden-administratie_text">
+                <p>
+                    This was my PHP & SQL final project. (Laravel)
+                    The app is made in Laravel and has a MySQL database. This was mostly a backend project. <br>
+                    The app is hosted on my Heroku account.
+                </p>
+                <p>
+                    The app is a "user membership management" (leden adminstratie) application where new users can be
+                    made and a subscription fee is calculated based on the age of the user and membership plans. The
+                    users are grouped into families.
+                </p>
+            </div>
+        </section>
 		<section class="projects-section" id="projects-ninjarun">
 			<header class="projects-sectionheader" id="projects-ninjarun-header">
 				<a href="/ninjarun" target="blank">
