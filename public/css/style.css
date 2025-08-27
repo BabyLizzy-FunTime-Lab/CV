@@ -24,9 +24,40 @@
 	--color-cine-border: rgb(7, 116, 184);
 	--color-real-estate-care-border: rgb(7, 184, 166);
     --color-leden-administratie-border: rgb(30,144,255);
+    --color-skill-bar: rgb(216,191,216);
+    --color-skill-bar-lv: rgb(60,179,113);
 	/*images*/
 	--img-logo-background: url(https://res.cloudinary.com/babylizzyevee/image/upload/c_limit,h_400,q_100,x_1406,y_1225/v1643152743/CV-images/lizzy_art_square_sclfqn.jpg);
 	--img-ninjarun-world: url(https://res.cloudinary.com/babylizzyevee/image/upload/c_scale,h_400,q_100/v1643152739/CV-images/ninjarun_world_ahep2j.jpg);
+    /*Skill levels*/
+    --skill-lv-html: 70%;
+    --skill-lv-css3: 70%;
+    --skill-lv-javascript: 70%;
+    --skill-lv-php: 70%;
+    --skill-lv-vue: 60%;
+    --skill-lv-ionic: 60%;
+    --skill-lv-node: 50%;
+    --skill-lv-express: 50%;
+    --skill-lv-php-storm: 50%;
+    --skill-lv-laravel: 60%;
+    --skill-lv-sql: 50%;
+    --skill-lv-github: 50%;
+    --skill-lv-bootstrap: 55%;
+    --skill-lv-scrum: 50%;
+    --skill-lv-pug: 30%;
+    --skill-lv-jquery: 35%;
+    --skill-lv-twig: 40%;
+    --skill-lv-symphony: 35%;
+    --skill-lv-doctrine: 35%;
+    --skill-lv-shopware: 35%;
+    --skill-lv-ddev: 35%;
+    --skill-lv-zendesk: 50%;
+    --skill-lv-magento: 35%;
+    --skill-lv-confluence: 50%;
+    --skill-lv-project-based-working: 80%;
+    --skill-lv-critical-thinking: 80%;
+    --skill-lv-clinical: 75%;
+    --skill-lv-self-reflection: 85%;
 }
 html {
 	scroll-behavior: smooth;
@@ -361,6 +392,69 @@ and (-webkit-min-device-pixel-ratio:  3) {
 }
 #resume-education {
 	grid-area: resume-education;
+}
+.skill-bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-skill-bar);
+}
+.skill-bar__lv {
+    height: inherit;
+    background-color: var(--color-skill-bar-lv);
+}
+.skill-bar__html {
+    width: var(--skill-lv-html);
+}
+.skill-bar__css {
+    width: var(--skill-lv-css3);
+}
+.skill-bar__javascript {
+    width: var(--skill-lv-javascript);
+}
+.skill-bar__php {
+    width: var(--skill-lv-php);
+}
+.skill-bar__vue {
+    width: var(--skill-lv-vue);
+}
+.skill-bar__ionic {
+    width: var(--skill-lv-ionic);
+}
+.skill-bar__node {
+    width: var(--skill-lv-node);
+}
+.skill-bar__express {
+    width: var(--skill-lv-express);
+}
+.skill-bar__php-storm {
+    width: var(--skill-lv-php-storm);
+}
+.skill-bar__laravel {
+    width: var(--skill-lv-laravel);
+}
+.skill-bar__sql {
+    width: var(--skill-lv-sql);
+}
+.skill-bar__github {
+    width: var(--skill-lv-github);
+}
+.skill-bar__bootstrap {
+    width: var(--skill-lv-bootstrap);
+}
+.skill-bar__scrum {
+    width: var(--skill-lv-scrum);
+}
+.skill-bar__pug {
+    width: var(--skill-lv-pug);
+}
+.skill-bar__jquery {
+    width: var(--skill-lv-jquery);
+}
+.skill-bar__twig {
+    width: var(--skill-lv-twig);
+}
+.skill-bar__symphony {
+    width: var(--skill-lv-symphony);
 }
 
 /*//////////// Languages /////////////*/
