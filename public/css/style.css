@@ -24,6 +24,8 @@
 	--color-cine-border: rgb(7, 116, 184);
 	--color-real-estate-care-border: rgb(7, 184, 166);
     --color-leden-administratie-border: rgb(30,144,255);
+    --color-skill-bar: rgb(216,191,216);
+    --color-skill-bar-lv: rgb(60,179,113);
 	/*images*/
 	--img-logo-background: url(https://res.cloudinary.com/babylizzyevee/image/upload/c_limit,h_400,q_100,x_1406,y_1225/v1643152743/CV-images/lizzy_art_square_sclfqn.jpg);
 	--img-ninjarun-world: url(https://res.cloudinary.com/babylizzyevee/image/upload/c_scale,h_400,q_100/v1643152739/CV-images/ninjarun_world_ahep2j.jpg);
@@ -356,11 +358,25 @@ and (-webkit-min-device-pixel-ratio:  3) {
 .resume-skills-table th {
 	text-align: left;
 }
+.resume-skills-table td {
+    width: 9em;
+}
 .resume-education-info {
 	margin: 0 0 1em 0;
 }
 #resume-education {
 	grid-area: resume-education;
+}
+.skill-bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-skill-bar);
+}
+.skill-bar__lv {
+    width: 0;
+    height: inherit;
+    background-color: var(--color-skill-bar-lv);
+    transition: width 1s ease;
 }
 
 /*//////////// Languages /////////////*/
