@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<script src="/js/main.js" async></script>
+    <script src="/js/skillLevels.js" async></script>
 </head>
 <body id="body">
 	<nav id="nav-container">
@@ -108,7 +109,7 @@
 							<td>
                                 <span>HTML5</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__html"></div>
+                                    <div class="skill-bar__lv " data-skill="html"></div>
                                 </div>
                             </td>
 						</tr>
@@ -116,7 +117,7 @@
 							<td>
                                 <span>CSS3</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__css"></div>
+                                    <div class="skill-bar__lv " data-skill="css"></div>
                                 </div>
                             </td>
 						</tr>
@@ -124,7 +125,7 @@
 							<td>
                                 <span>JavaScript</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__javascript"></div>
+                                    <div class="skill-bar__lv " data-skill="javascript"></div>
                                 </div>
                             </td>
 						</tr>
@@ -132,7 +133,7 @@
 							<td>
                                 <span>PHP</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__php"></div>
+                                    <div class="skill-bar__lv " data-skill="php"></div>
                                 </div>
                             </td>
 						</tr>
@@ -147,13 +148,13 @@
 							<td>
                                 <span>Vue.js</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__vue"></div>
+                                    <div class="skill-bar__lv" data-skill="vue"></div>
                                 </div>
                             </td>
 							<td>
                                 <span>Ionic</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__ionic"></div>
+                                    <div class="skill-bar__lv" data-skill="ionic"></div>
                                 </div>
                             </td>
 						</tr>
@@ -161,13 +162,13 @@
                             <td>
                                 <span>Node.js</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__node"></div>
+                                    <div class="skill-bar__lv" data-skill="node"></div>
                                 </div>
                             </td>
                             <td>
                                 <span>Express.js</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__express"></div>
+                                    <div class="skill-bar__lv" data-skill="express"></div>
                                 </div>
                             </td>
                         </tr>
@@ -175,13 +176,13 @@
                             <td>
                                 <span>PHPStorm</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__php-storm"></div>
+                                    <div class="skill-bar__lv" data-skill="php-storm"></div>
                                 </div>
                             </td>
                             <td>
                                 <span>Laravel</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__laravel"></div>
+                                    <div class="skill-bar__lv" data-skill="laravel"></div>
                                 </div>
                             </td>
                         </tr>
@@ -189,13 +190,13 @@
 							<td>
                                 <span>SQL</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__sql"></div>
+                                    <div class="skill-bar__lv" data-skill="sql"></div>
                                 </div>
                             </td>
 							<td>
                                 <span>Git (Hub/Lab)</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__github"></div>
+                                    <div class="skill-bar__lv" data-skill="github"></div>
                                 </div>
                             </td>
 						</tr>
@@ -203,13 +204,13 @@
 							<td>
                                 <span>Bootstrap</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__bootstrap"></div>
+                                    <div class="skill-bar__lv" data-skill="bootstrap"></div>
                                 </div>
                             </td>
 							<td>
                                 <span>Scrum</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__scrum"></div>
+                                    <div class="skill-bar__lv" data-skill="scrum"></div>
                                 </div>
                             </td>
 						</tr>
@@ -217,13 +218,13 @@
                             <td>
                                 <span>PUG</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__pug"></div>
+                                    <div class="skill-bar__lv" data-skill="pug"></div>
                                 </div>
                             </td>
                             <td>
                                 <span>jQuery</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__jquery"></div>
+                                    <div class="skill-bar__lv" data-skill="jquery"></div>
                                 </div>
                             </td>
                         </tr>
@@ -231,13 +232,13 @@
 							<td>
                                 <span>Twig</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__twig"></div>
+                                    <div class="skill-bar__lv" data-skill="twig"></div>
                                 </div>
                             </td>
 							<td>
                                 <span>Symphony</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__symphony"></div>
+                                    <div class="skill-bar__lv" data-skill="symphony"></div>
                                 </div>
                             </td>
 						</tr>
@@ -245,13 +246,13 @@
 							<td>
                                 <span>Doctrine</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__doctrine"></div>
+                                    <div class="skill-bar__lv" data-skill="doctrine"></div>
                                 </div>
                             </td>
 							<td>
                                 <span>Shopware 6</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__shopware"></div>
+                                    <div class="skill-bar__lv" data-skill="shopware"></div>
                                 </div>
                             </td>
 						</tr>
@@ -259,13 +260,13 @@
 							<td>
                                 <span>DDEV</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__ddev"></div>
+                                    <div class="skill-bar__lv" data-skill="ddev"></div>
                                 </div>
                             </td>
 							<td>
                                 <span>Zendesk</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__zendesk"></div>
+                                    <div class="skill-bar__lv" data-skill="zendesk"></div>
                                 </div>
                             </td>
 						</tr>
@@ -273,13 +274,13 @@
                             <td>
                                 <span>Magento 2</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__magento"></div>
+                                    <div class="skill-bar__lv" data-skill="magento"></div>
                                 </div>
                             </td>
 							<td>
                                 <span>Confluence</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__confluence"></div>
+                                    <div class="skill-bar__lv" data-skill="confluence"></div>
                                 </div>
                             </td>
 						</tr>
@@ -294,9 +295,9 @@
 						</tr>
 						<tr>
 							<td>
-                                <span>Project-based working</span>
+                                <span>Project-based work</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__project-based-working"></div>
+                                    <div class="skill-bar__lv" data-skill="project-based-work"></div>
                                 </div>
                             </td>
 						</tr>
@@ -304,7 +305,7 @@
 							<td>
                                 <span>Critical Thinking</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__critical-thinking"></div>
+                                    <div class="skill-bar__lv" data-skill="critical-thinking"></div>
                                 </div>
                             </td>
 						</tr>
@@ -312,7 +313,7 @@
 							<td>
                                 <span>Clinical Reasoning</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__clinical-reasoning"></div>
+                                    <div class="skill-bar__lv" data-skill="clinical-reasoning"></div>
                                 </div>
                             </td>
 						</tr>
@@ -320,7 +321,7 @@
 							<td>
                                 <span>Self-reflection</span>
                                 <div class="skill-bar">
-                                    <div class="skill-bar__lv skill-bar__self-reflection"></div>
+                                    <div class="skill-bar__lv" data-skill="self-reflection"></div>
                                 </div>
                             </td>
 						</tr>
