@@ -80,7 +80,8 @@ function elementID(id) {
             figure.style.width = "80vw";
             figure.style.boxSizing = "border-box";
             figure.style.overflow = "hidden";
-			figure.style.backgroundColor = color_black;
+            figure.style.borderRadius = "15px";
+            figure.style.backgroundColor = color_black;
 			
 			let close = document.createElement("div");
 			close.setAttribute("style", "width:2em;height:2em;margin: .5em auto .5em auto;");
@@ -144,6 +145,7 @@ function elementID(id) {
 			let image = document.createElement("img");
 			image.setAttribute("src", imagesource);
 			image.setAttribute("id", "viewerImage");
+            image.style.borderRadius = "10px";
             image.style.maxWidth = "100%";
             image.style.maxHeight = "100%";
             image.style.width = "auto";
