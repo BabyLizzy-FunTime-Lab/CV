@@ -74,12 +74,14 @@ function elementID(id) {
 			viewerContainer.style.justifyContent = "center";
 			viewerContainer.style.backgroundColor = color_blackfade;
 
-			let figure = document.createElement("figure");
-			figure.style.display = "flex";
-			figure.style.flexDirection = "column";
-			figure.style.margin = "0";
-			figure.style.padding = "0 0.2em 0 0.2em";
-			figure.style.backgroundColor = color_black;
+			let figure = document.createElement("div");
+			figure.style.display = "grid";
+			figure.style.gridTemplateRows = "auto 60vh auto";
+            figure.style.width = "80vw";
+            figure.style.boxSizing = "border-box";
+            figure.style.overflow = "hidden";
+            figure.style.borderRadius = "15px";
+            figure.style.backgroundColor = color_black;
 			
 			let close = document.createElement("div");
 			close.setAttribute("style", "width:2em;height:2em;margin: .5em auto .5em auto;");
@@ -131,21 +133,32 @@ function elementID(id) {
 			})
 
 			let controls_container = document.createElement("div");
-			controls_container.setAttribute("style", "display:flex;justify-content:space-around;");
+			controls_container.setAttribute("style", "display:inline-grid;grid-template-columns:1fr 1fr 1fr;");
 			controls_container.append(previous, close, next);
 
+            let imageContainer = document.createElement("div");
+            imageContainer.setAttribute("style", "width:100%;height:100%;");
+            imageContainer.style.display = "flex";
+            imageContainer.style.alignItems = "center";
+            imageContainer.style.justifyContent = "center";
 
 			let image = document.createElement("img");
 			image.setAttribute("src", imagesource);
 			image.setAttribute("id", "viewerImage");
+            image.style.borderRadius = "10px";
+            image.style.maxWidth = "100%";
+            image.style.maxHeight = "100%";
+            image.style.width = "auto";
+            image.style.height = "auto";
+            image.style.objectFit = "contain";
+            image.style.objectPosition = "center";
+
 			function landscapeMobile(size) {
 				if(size.matches) {
-					image.setAttribute("style", "width:100%;height:100%;max-height:15em;object-position:center;object-fit:contain;");
-				} else {
-					image.setAttribute("style", "width:100%;height:100%;max-height:40em;object-position:center;object-fit:contain;");
+                    figure.style.width = "60vw";
 				}
 			}
-			let landscape_Size = window.matchMedia("(max-height: 600px)"); 
+			let landscape_Size = window.matchMedia("(max-height: 600px)");
 			landscapeMobile(landscape_Size);
 			landscape_Size.addListener(landscapeMobile);
 			
@@ -154,10 +167,12 @@ function elementID(id) {
 			caption.style.color = color_whitesmoke;
 			caption.style.textAlign = "center";
 			caption.style.margin = ".4em 0 .4em 0";
+            caption.style.height = "2em";
 			caption.innerText = imageText;
 
 			figure.appendChild(controls_container);
-			figure.appendChild(image);
+            imageContainer.appendChild(image);
+            figure.appendChild(imageContainer);
 			figure.appendChild(caption);
 			viewerContainer.appendChild(figure);
 			document.body.insertBefore(viewerContainer, window.document.body.firstChild);

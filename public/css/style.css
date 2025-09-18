@@ -538,6 +538,7 @@ and (-webkit-min-device-pixel-ratio:  3) {
 .projects-section {
 	margin: .5em auto .5em auto;
 	width: 90%;
+    min-height: 21em;
 	border: 2px solid;
 	border-radius: 0 0 .5em .5em;
 	box-sizing: border-box;
